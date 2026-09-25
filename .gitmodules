@@ -1,7 +1,0 @@
-[submodule "Net"]
-	path = Net
-	url = https://github.com/jyoushitou/NetWorkCommunication.git
-
-[submodule "Utils"]
-	path = Utils
-	url = https://github.com/jyoushitou/Utils.git
