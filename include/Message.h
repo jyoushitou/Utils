@@ -1,109 +1,66 @@
-/// @file        Message.h
-/// @brief       服务ID定义与网络协议常量
+/// @brief       服务ID定义
 /// @author      jyoushitou
 /// @date        2026-09-16
 /// @copyright   Copyright (c) 2026
 
 // 防止重复包含
 #pragma once
-#include <unordered_map>
-#include <string>
-#include <atomic>
 
-/// @brief      RPC网关服务
-/// @details    服务器ID=1，负责请求转发与路由
-/// @note
-constexpr int ServiceID_RPCGateway = 1;
-/// @brief      SQL数据库服务
-/// @details    服务器ID=2，负责数据持久化
-/// @note
-constexpr int ServiceID_SQL = 2;
-/// @brief      注册中心服务
-/// @details    服务器ID=3，负责服务发现与注册
-/// @note
-constexpr int ServiceID_Registry = 3;
-/// @brief      配置中心服务
-/// @details    服务器ID=4，负责统一配置管理
-/// @note
-constexpr int ServiceID_ConfigCenter = 4;
-/// @brief      监控服务
-/// @details    服务器ID=5，负责系统运行状态监控
-/// @note
-constexpr int ServiceID_MonitorService = 5;
-/// @brief      安全服务
-/// @details    服务器ID=6，负责访问控制与安全防护
-/// @note
-constexpr int ServiceID_SecurityService = 6;
-/// @brief      证书服务
-/// @details    服务器ID=7，负责证书签发与管理
-/// @note
-constexpr int ServiceID_CertService = 7;
-/// @brief      链路追踪服务
-/// @details    服务器ID=8，负责分布式链路追踪
-/// @note
-constexpr int ServiceID_TracingService = 8;
-/// @brief      服务控制台
-/// @details    服务器ID=9，负责服务管理界面
-/// @note
-constexpr int ServiceID_ServiceConsole = 9;
-/// @brief      管理控制台
-/// @details    服务器ID=10，负责后台管理界面
-/// @note
-constexpr int ServiceID_AdminConsole = 10;
-/// @brief      用户服务
-/// @details    服务器ID=11，负责用户信息与认证
-/// @note
-constexpr int ServiceID_User = 11;
-/// @brief      文章服务
-/// @details    服务器ID=12，负责文章内容管理
-/// @note
-constexpr int ServiceID_Article = 12;
-/// @brief      博客服务
-/// @details    服务器ID=13，负责博客业务逻辑
-/// @note
-constexpr int ServiceID_Blog = 13;
-/// @brief      图片服务
-/// @details    服务器ID=14，负责图片上传与处理
-/// @note
-constexpr int ServiceID_Image = 14;
-/// @brief      视频服务
-/// @details    服务器ID=15，负责视频上传与处理
-/// @note
-constexpr int ServiceID_Video = 15;
-/// @brief      搜索服务
-/// @details    服务器ID=16，负责全文检索
-/// @note
-constexpr int ServiceID_Search = 16;
+#include <string_view>
 
-/// @brief      服务器ID映射
-/// @details    服务器ID到服务名称的映射表
-/// @note
-inline std::unordered_map<int, std::string> ServiceID = {
-    {1, "RPCGateway"},      {2, "SQL"},         {3, "Registry"},       {4, "ConfigCenter"},   {5, "MonitorService"},
-    {6, "SecurityService"}, {7, "CertService"}, {8, "TracingService"}, {9, "ServiceConsole"}, {10, "AdminConsole"},
-    {11, "User"},           {12, "Article"},    {13, "Blog"},          {14, "Image"},         {15, "Video"},
-    {16, "Search"}};
-
-namespace Net
+/// @brief      服务ID
+/// @details    唯一的服务寻址标识，会写入消息头，两端必须一致
+/// @note       显式赋值，禁止依赖默认递增
+enum ServiceID : int
 {
-    /// @brief      消息ID长度
-    /// @details    消息头部中消息ID所占字节数
-    /// @note
-    constexpr short HEAD_ID_LENGTH = 8;
+    ServiceID_Invalid         = 0,  ///< 无效/未指定
+    ServiceID_RPCGateway      = 1,  ///< RPC网关服务：请求转发与路由
+    ServiceID_SQL             = 2,  ///< SQL数据库服务：数据持久化
+    ServiceID_Registry        = 3,  ///< 注册中心服务：服务发现与注册
+    ServiceID_ConfigCenter    = 4,  ///< 配置中心服务：统一配置管理
+    ServiceID_MonitorService  = 5,  ///< 监控服务：运行状态监控
+    ServiceID_SecurityService = 6,  ///< 安全服务：访问控制与安全防护
+    ServiceID_CertService     = 7,  ///< 证书服务：证书签发与管理
+    ServiceID_TracingService  = 8,  ///< 链路追踪服务：分布式链路追踪
+    ServiceID_ServiceConsole  = 9,  ///< 服务控制台：服务管理界面
+    ServiceID_AdminConsole    = 10, ///< 管理控制台：后台管理界面
+    ServiceID_User            = 11, ///< 用户服务：用户信息与认证
+    ServiceID_Article         = 12, ///< 文章服务：文章内容管理
+    ServiceID_Blog            = 13, ///< 博客服务：博客业务逻辑
+    ServiceID_Image           = 14, ///< 图片服务：图片上传与处理
+    ServiceID_Video           = 15, ///< 视频服务：视频上传与处理
+    ServiceID_Search          = 16, ///< 搜索服务：全文检索
+};
 
-    /// @brief      消息长度长度
-    /// @details    消息头部中消息长度字段所占字节数
-    /// @note
-    constexpr short HEAD_LEN_LENGTH = 4;
+/// @brief      服务ID转名称
+/// @details    仅用于日志与诊断
+/// @param[in]  id 服务ID
+/// @return     服务名称，无效/未知ID返回空
+/// @warning    新增枚举值后必须在此补充 case
+/// @note       编译期可求值，无堆分配
+constexpr std::string_view ServiceName(ServiceID id) noexcept
+{
+    switch (id)
+    {
+    case ServiceID_Invalid:         return {};
+    case ServiceID_RPCGateway:      return "RPCGateway";
+    case ServiceID_SQL:             return "SQL";
+    case ServiceID_Registry:        return "Registry";
+    case ServiceID_ConfigCenter:    return "ConfigCenter";
+    case ServiceID_MonitorService:  return "MonitorService";
+    case ServiceID_SecurityService: return "SecurityService";
+    case ServiceID_CertService:     return "CertService";
+    case ServiceID_TracingService:  return "TracingService";
+    case ServiceID_ServiceConsole:  return "ServiceConsole";
+    case ServiceID_AdminConsole:    return "AdminConsole";
+    case ServiceID_User:            return "User";
+    case ServiceID_Article:         return "Article";
+    case ServiceID_Blog:            return "Blog";
+    case ServiceID_Image:           return "Image";
+    case ServiceID_Video:           return "Video";
+    case ServiceID_Search:          return "Search";
+    }
+    // 枚举已全覆盖；兜底返回以应对非法强转值
+    return {};
+}
 
-    /// @brief      消息头部长度
-    /// @details    消息ID、消息长度、请求服务器ID与目标服务器ID长度之和
-    /// @note
-    constexpr short HEAD_LENGTH = HEAD_ID_LENGTH + HEAD_LEN_LENGTH;
-
-    /// @brief      最大消息长度
-    /// @details    单条消息允许的最大长度（1M）
-    /// @warning    超出该长度视为非法消息
-    /// @note
-    constexpr int MAX_LENGTH = 1024 * 1024;
-} // namespace Net

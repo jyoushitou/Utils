@@ -10,6 +10,7 @@
 #include <functional>
 
 #include "Message.h"
+#include <atomic>
 
 #ifdef _WIN32
 
