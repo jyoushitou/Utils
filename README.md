@@ -10,6 +10,7 @@
 - **优雅退出**：跨平台（Windows 控制台事件 / POSIX 信号）统一退出流程，支持注册停止回调
 - **服务寻址**：`Message.h` 定义全局 `ServiceID` 枚举与名称转换
 - **构建友好**：CMake 一键切换静态库 / 动态库，自动生成导出宏头文件，支持 `install` + `find_package`
+- **开箱即用**：构建的同时自动把「公开头文件 + 生成的导出宏头」复制到库产物同级 `include/`，免安装即可直接引用
 
 ## 目录结构
 
@@ -49,12 +50,15 @@ cmake --build build --config Release
 
 主要产物（Windows + VS 生成器）：
 
-| 产物           | 路径                                    |
-| -------------- | --------------------------------------- |
-| 静态库         | `build/Release/Utils.lib`               |
-| 动态库         | `build/Release/Utils.dll` + `Utils.lib` |
-| 测试程序       | `build/tests/Release/UtilsTests.exe`    |
-| 生成的导出宏头 | `build/include/UtilsExport.h`           |
+| 产物             | 路径                                             |
+| ---------------- | ------------------------------------------------ |
+| 静态库           | `build/Release/Utils.lib`                        |
+| 动态库           | `build/Release/Utils.dll` + `Utils.lib`          |
+| 测试程序         | `build/tests/Release/UtilsTests.exe`             |
+| 生成的导出宏头   | `build/include/UtilsExport.h`                    |
+| 复制的公开头文件 | `build/include/Message.h`、`Utils.h`（构建时自动） |
+
+> 构建完成后，`build/include/` 下即为「公开头文件 + 生成的 `UtilsExport.h`」一整套头，可直接连同库文件使用。
 
 ## 测试
 
@@ -84,6 +88,57 @@ add_subdirectory(path/to/Utils)
 target_link_libraries(your_app PRIVATE Utils::Utils)
 ```
 
+## 快速开始（示例）
+
+下面是一个最小可用示例，涵盖初始化、输出、时间、日志与优雅退出：
+
+```cpp
+// demo.cpp
+#include "Utils.h"   // 库主头文件（会自动包含 Message.h 与 UtilsExport.h）
+
+int main()
+{
+    // 1) 初始化：搭建控制台并注册退出相关处理，应在程序早期调用
+    Utils::init();
+
+    // 2) 设置本进程的服务ID（全局唯一，供日志/寻址使用）
+    Utils::serviceID = ServiceID_User;
+
+    // 3) 统一输出（信息 / 错误 / 网络）
+    Utils::Out::outMsg("服务启动");
+    Utils::Out::outErr("这是一条错误提示");
+    Utils::Out::outNetMsg(1001, "网络输出示例");   // 参数：消息ID + 内容
+
+    // 4) 时间工具
+    time_t t0 = Utils::Time::nowTime();                          // 当前时间戳
+    Utils::Out::outMsg("当前时间：" + Utils::Time::getNowtime()); // 格式化时间
+    Utils::Out::outMsg("当前日期：" + Utils::Time::getNowDay()); // 格式化日期
+    // ... 业务处理 ...
+    Utils::Out::outMsg("本次处理耗时(秒)：" + std::to_string(Utils::Time::computeTime(t0)));
+
+    // 5) 文件与日志
+    Utils::File::setLogsDir("logs");        // 自定义日志目录（默认即 "logs"）
+    Utils::File::checkLogsDir();            // 目录不存在则创建
+    Utils::File::outLog("写入一条日志");     // 写入日志文件
+    Utils::File::outFileAdd("data.txt", "追加一行\n"); // 追加写文件
+    Utils::File::outFileWirte("data.txt", "覆盖内容\n"); // 覆写文件
+
+    // 6) 优雅退出：注册停止回调，阻塞等待退出信号
+    Utils::Exit::registerStopCallback([](){
+        Utils::Out::outMsg("收到退出信号，开始清理资源...");
+    });
+
+    // 主线程在此阻塞，直到收到系统退出信号或外部调用 recviceExit()
+    Utils::Exit::waitExit();
+
+    // 退出流程（waitExit 返回后触发，或手动调用）
+    Utils::Exit::gracefulShutdown();
+    return 0;
+}
+```
+
+> 编译时请确保 `UtilsExport.h` 与 `Message.h`、`Utils.h` 在同一包含目录（构建后位于 `build/include/`）。
+
 ## 直接使用头文件 + 库文件
 
 不使用 CMake 时，手动把「公开头文件 + 生成的导出宏头 + 库文件」组合起来即可。
@@ -98,17 +153,20 @@ target_link_libraries(your_app PRIVATE Utils::Utils)
 
 > 注意：`UtilsExport.h` 由 `generate_export_header` 生成，不在源码树里，必须从构建/安装目录取。
 > 头文件里 `#include "UtilsExport.h"`，因此二者要在同一包含目录中。
+>
+> 省事做法：构建完成后 `build/include/` 已经同时包含「公开头文件 + 生成的 `UtilsExport.h`」一整套，
+> 直接把这个目录整体拷到你的工程即可（见上面「主要产物」表）。
 
 ### 推荐目录摆放
 
 ```
 myapp/
-├─ include/
+├─ include/                # 直接把 build/include 整个目录拷贝过来即可
 │  ├─ Message.h
 │  ├─ Utils.h
-│  └─ UtilsExport.h        # 从 build/include 或 out/include 拷来
+│  └─ UtilsExport.h        # 构建时自动生成于 build/include
 ├─ lib/
-│  └─ Utils.lib            # 静态库；动态库再加 Utils.dll
+│  └─ Utils.lib            # 静态库；动态库再从 build/Release 补 Utils.dll
 └─ src/
    └─ main.cpp
 ```

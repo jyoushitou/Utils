@@ -35,8 +35,13 @@ events:
     found: "E:/app/Cmake/share/cmake-4.3/Modules/CMakeCXXCompilerId.cpp.in"
     search_context:
       ENV{PATH}:
-        - "c:\\Users\\jyoushitou\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
-        - "c:\\Users\\jyoushitou\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.26100.0\\x86"
+        - "C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\Common7\\IDE\\"
+        - "C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\VC\\BIN"
+        - "C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\Common7\\Tools"
+        - "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319"
+        - "C:\\Program Files (x86)\\HTML Help Workshop"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\bin\\x86"
         - "D:\\app\\VMware\\bin\\"
         - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
         - "C:\\Windows\\system32"
@@ -126,6 +131,13 @@ events:
         - "C:\\Users\\jyoushitou\\.dotnet\\tools"
         - "%VCPKG_TOOLS%\\protobuf"
         - "D:\\vcpkg\\installed\\x64-windows\\tools\\protobuf"
+      ENV{INCLUDE}:
+        - "C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\VC\\INCLUDE"
+        - "C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\VC\\ATLMFC\\INCLUDE"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.26100.0\\ucrt"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.26100.0\\shared"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.26100.0\\um"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.26100.0\\winrt"
   -
     kind: "message-v1"
     backtrace:
@@ -141,8 +153,8 @@ events:
       
       The output was:
       0
-      閫傜敤浜?.NET Framework MSBuild 鐗堟湰 18.4.0+6e61e96ac
-      鐢熸垚鍚姩鏃堕棿涓?2026/10/1 19:01:48銆?
+      閫傜敤浜?.NET Framework MSBuild 鐗堟湰 17.14.40+3e7442088
+      鐢熸垚鍚姩鏃堕棿涓?2026/10/1 19:38:41銆?
       
       鑺傜偣 1 涓婄殑椤圭洰鈥淒:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\4.3.3\\CompilerIdCXX\\CompilerIdCXX.vcxproj鈥?榛樿鐩爣)銆?
       PrepareForBuild:
@@ -153,21 +165,21 @@ events:
         姝ｅ湪鍒涘缓鈥淒ebug\\CompilerIdCXX.tlog\\unsuccessfulbuild鈥濓紝鍥犱负宸叉寚瀹氣€淎lwaysCreate鈥濄€?
         姝ｅ湪瀵光€淒ebug\\CompilerIdCXX.tlog\\unsuccessfulbuild鈥濇墽琛?Touch 浠诲姟銆?
       VcpkgTripletSelection:
-        Using triplet "x64-windows" from "D:\\vcpkg\\installed\\x64-windows\\"
+        Using triplet "x86-windows" from "D:\\vcpkg\\installed\\x86-windows\\"
         Using normalized configuration "Release"
       ClCompile:
-        D:\\app\\MCVS\\2026\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\CL.exe /c /I"D:\\vcpkg\\installed\\x64-windows\\include" /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc145.pdb" /external:W0 /Gd /TP /FC /errorReport:queue CMakeCXXCompilerId.cpp
+        D:\\app\\VisualStudio\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x86\\CL.exe /c /I"D:\\vcpkg\\installed\\x86-windows\\include" /nologo /W0 /WX- /diagnostics:column /Od /Oy- /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc143.pdb" /external:W0 /Gd /TP /analyze- /FC /errorReport:queue CMakeCXXCompilerId.cpp
         CMakeCXXCompilerId.cpp
       Link:
-        D:\\app\\MCVS\\2026\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"D:\\vcpkg\\installed\\x64-windows\\lib" /LIBPATH:"D:\\vcpkg\\installed\\x64-windows\\lib\\manual-link" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib "D:\\vcpkg\\installed\\x64-windows\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCXX.lib" /MACHINE:X64 Debug\\CMakeCXXCompilerId.obj
+        D:\\app\\VisualStudio\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x86\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"D:\\vcpkg\\installed\\x86-windows\\lib" /LIBPATH:"D:\\vcpkg\\installed\\x86-windows\\lib\\manual-link" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib "D:\\vcpkg\\installed\\x86-windows\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCXX.lib" /MACHINE:X86 /SAFESEH Debug\\CMakeCXXCompilerId.obj
         CompilerIdCXX.vcxproj -> D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\4.3.3\\CompilerIdCXX\\CompilerIdCXX.exe
       AppLocalFromInstalled:
-        "D:\\vcpkg\\vcpkg.exe" z-applocal --target-binary="D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\4.3.3\\CompilerIdCXX\\CompilerIdCXX.exe" --installed-bin-dir="D:\\vcpkg\\installed\\x64-windows\\bin" --tlog-file="Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.write.1u.tlog" --copied-files-log="Debug\\vcpkg.applocal.log"
+        "D:\\vcpkg\\vcpkg.exe" z-applocal --target-binary="D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\4.3.3\\CompilerIdCXX\\CompilerIdCXX.exe" --installed-bin-dir="D:\\vcpkg\\installed\\x86-windows\\bin" --tlog-file="Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.write.1u.tlog" --copied-files-log="Debug\\vcpkg.applocal.log"
         D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\4.3.3\\CompilerIdCXX\\CompilerIdCXX.exe: message: deploying dependencies
       PostBuildEvent:
         for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
         :VCEnd
-        CMAKE_CXX_COMPILER=D:\\app\\MCVS\\2026\\VC\\Tools\\MSVC\\14.50.35717\\bin\\Hostx64\\x64\\cl.exe
+        CMAKE_CXX_COMPILER=D:\\app\\VisualStudio\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x86\\cl.exe
       FinalizeBuildStatus:
         姝ｅ湪鍒犻櫎鏂囦欢鈥淒ebug\\CompilerIdCXX.tlog\\unsuccessfulbuild鈥濄€?
         姝ｅ湪瀵光€淒ebug\\CompilerIdCXX.tlog\\CompilerIdCXX.lastbuildstate鈥濇墽琛?Touch 浠诲姟銆?
@@ -177,7 +189,7 @@ events:
           0 涓鍛?
           0 涓敊璇?
       
-      宸茬敤鏃堕棿 00:00:01.35
+      宸茬敤鏃堕棿 00:00:01.65
       
       
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
@@ -209,9 +221,14 @@ events:
     names:
       - "link"
     candidate_directories:
-      - "D:/app/MCVS/2026/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/"
-      - "C:/Users/jyoushitou/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "C:/Users/jyoushitou/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "D:/app/VisualStudio/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x86/"
+      - "C:/Program Files (x86)/Windows Kits/10/bin/10.0.26100.0/x86/"
+      - "C:/Program Files (x86)/Microsoft Visual Studio 14.0/Common7/IDE/"
+      - "C:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/"
+      - "C:/Program Files (x86)/Microsoft Visual Studio 14.0/Common7/Tools/"
+      - "C:/Windows/Microsoft.NET/Framework/v4.0.30319/"
+      - "C:/Program Files (x86)/HTML Help Workshop/"
+      - "C:/Program Files (x86)/Windows Kits/10/bin/x86/"
       - "D:/app/VMware/bin/"
       - "C:/Program Files/Common Files/Oracle/Java/javapath/"
       - "C:/Windows/System32/"
@@ -266,12 +283,17 @@ events:
       - "D:/WebService_Project/Common_CPP/Utils/build/%VCPKG_TOOLS%/protobuf/"
       - "D:/vcpkg/installed/x64-windows/tools/protobuf/"
     searched_directories:
-      - "D:/app/MCVS/2026/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/link.com"
-    found: "D:/app/MCVS/2026/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/link.exe"
+      - "D:/app/VisualStudio/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x86/link.com"
+    found: "D:/app/VisualStudio/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x86/link.exe"
     search_context:
       ENV{PATH}:
-        - "c:\\Users\\jyoushitou\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
-        - "c:\\Users\\jyoushitou\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.26100.0\\x86"
+        - "C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\Common7\\IDE\\"
+        - "C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\VC\\BIN"
+        - "C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\Common7\\Tools"
+        - "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319"
+        - "C:\\Program Files (x86)\\HTML Help Workshop"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\bin\\x86"
         - "D:\\app\\VMware\\bin\\"
         - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
         - "C:\\Windows\\system32"
@@ -383,9 +405,14 @@ events:
     names:
       - "lld-link"
     candidate_directories:
-      - "D:/app/MCVS/2026/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/"
-      - "C:/Users/jyoushitou/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "C:/Users/jyoushitou/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "D:/app/VisualStudio/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x86/"
+      - "C:/Program Files (x86)/Windows Kits/10/bin/10.0.26100.0/x86/"
+      - "C:/Program Files (x86)/Microsoft Visual Studio 14.0/Common7/IDE/"
+      - "C:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/"
+      - "C:/Program Files (x86)/Microsoft Visual Studio 14.0/Common7/Tools/"
+      - "C:/Windows/Microsoft.NET/Framework/v4.0.30319/"
+      - "C:/Program Files (x86)/HTML Help Workshop/"
+      - "C:/Program Files (x86)/Windows Kits/10/bin/x86/"
       - "D:/app/VMware/bin/"
       - "C:/Program Files/Common Files/Oracle/Java/javapath/"
       - "C:/Windows/System32/"
@@ -440,15 +467,30 @@ events:
       - "D:/WebService_Project/Common_CPP/Utils/build/%VCPKG_TOOLS%/protobuf/"
       - "D:/vcpkg/installed/x64-windows/tools/protobuf/"
     searched_directories:
-      - "D:/app/MCVS/2026/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/lld-link.com"
-      - "D:/app/MCVS/2026/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/lld-link.exe"
-      - "D:/app/MCVS/2026/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/lld-link"
-      - "C:/Users/jyoushitou/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/lld-link.com"
-      - "C:/Users/jyoushitou/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/lld-link.exe"
-      - "C:/Users/jyoushitou/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/lld-link"
-      - "C:/Users/jyoushitou/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/lld-link.com"
-      - "C:/Users/jyoushitou/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/lld-link.exe"
-      - "C:/Users/jyoushitou/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/lld-link"
+      - "D:/app/VisualStudio/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x86/lld-link.com"
+      - "D:/app/VisualStudio/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x86/lld-link.exe"
+      - "D:/app/VisualStudio/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x86/lld-link"
+      - "C:/Program Files (x86)/Windows Kits/10/bin/10.0.26100.0/x86/lld-link.com"
+      - "C:/Program Files (x86)/Windows Kits/10/bin/10.0.26100.0/x86/lld-link.exe"
+      - "C:/Program Files (x86)/Windows Kits/10/bin/10.0.26100.0/x86/lld-link"
+      - "C:/Program Files (x86)/Microsoft Visual Studio 14.0/Common7/IDE/lld-link.com"
+      - "C:/Program Files (x86)/Microsoft Visual Studio 14.0/Common7/IDE/lld-link.exe"
+      - "C:/Program Files (x86)/Microsoft Visual Studio 14.0/Common7/IDE/lld-link"
+      - "C:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/lld-link.com"
+      - "C:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/lld-link.exe"
+      - "C:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/lld-link"
+      - "C:/Program Files (x86)/Microsoft Visual Studio 14.0/Common7/Tools/lld-link.com"
+      - "C:/Program Files (x86)/Microsoft Visual Studio 14.0/Common7/Tools/lld-link.exe"
+      - "C:/Program Files (x86)/Microsoft Visual Studio 14.0/Common7/Tools/lld-link"
+      - "C:/Windows/Microsoft.NET/Framework/v4.0.30319/lld-link.com"
+      - "C:/Windows/Microsoft.NET/Framework/v4.0.30319/lld-link.exe"
+      - "C:/Windows/Microsoft.NET/Framework/v4.0.30319/lld-link"
+      - "C:/Program Files (x86)/HTML Help Workshop/lld-link.com"
+      - "C:/Program Files (x86)/HTML Help Workshop/lld-link.exe"
+      - "C:/Program Files (x86)/HTML Help Workshop/lld-link"
+      - "C:/Program Files (x86)/Windows Kits/10/bin/x86/lld-link.com"
+      - "C:/Program Files (x86)/Windows Kits/10/bin/x86/lld-link.exe"
+      - "C:/Program Files (x86)/Windows Kits/10/bin/x86/lld-link"
       - "D:/app/VMware/bin/lld-link.com"
       - "D:/app/VMware/bin/lld-link.exe"
       - "D:/app/VMware/bin/lld-link"
@@ -611,8 +653,13 @@ events:
     found: false
     search_context:
       ENV{PATH}:
-        - "c:\\Users\\jyoushitou\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
-        - "c:\\Users\\jyoushitou\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.26100.0\\x86"
+        - "C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\Common7\\IDE\\"
+        - "C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\VC\\BIN"
+        - "C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\Common7\\Tools"
+        - "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319"
+        - "C:\\Program Files (x86)\\HTML Help Workshop"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\bin\\x86"
         - "D:\\app\\VMware\\bin\\"
         - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
         - "C:\\Windows\\system32"
@@ -722,9 +769,14 @@ events:
     names:
       - "link"
     candidate_directories:
-      - "D:/app/MCVS/2026/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/"
-      - "C:/Users/jyoushitou/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "C:/Users/jyoushitou/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "D:/app/VisualStudio/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x86/"
+      - "C:/Program Files (x86)/Windows Kits/10/bin/10.0.26100.0/x86/"
+      - "C:/Program Files (x86)/Microsoft Visual Studio 14.0/Common7/IDE/"
+      - "C:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/"
+      - "C:/Program Files (x86)/Microsoft Visual Studio 14.0/Common7/Tools/"
+      - "C:/Windows/Microsoft.NET/Framework/v4.0.30319/"
+      - "C:/Program Files (x86)/HTML Help Workshop/"
+      - "C:/Program Files (x86)/Windows Kits/10/bin/x86/"
       - "D:/app/VMware/bin/"
       - "C:/Program Files/Common Files/Oracle/Java/javapath/"
       - "C:/Windows/System32/"
@@ -779,12 +831,17 @@ events:
       - "D:/WebService_Project/Common_CPP/Utils/build/%VCPKG_TOOLS%/protobuf/"
       - "D:/vcpkg/installed/x64-windows/tools/protobuf/"
     searched_directories:
-      - "D:/app/MCVS/2026/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/link.com"
-    found: "D:/app/MCVS/2026/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/link.exe"
+      - "D:/app/VisualStudio/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x86/link.com"
+    found: "D:/app/VisualStudio/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x86/link.exe"
     search_context:
       ENV{PATH}:
-        - "c:\\Users\\jyoushitou\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
-        - "c:\\Users\\jyoushitou\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.26100.0\\x86"
+        - "C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\Common7\\IDE\\"
+        - "C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\VC\\BIN"
+        - "C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\Common7\\Tools"
+        - "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319"
+        - "C:\\Program Files (x86)\\HTML Help Workshop"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\bin\\x86"
         - "D:\\app\\VMware\\bin\\"
         - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
         - "C:\\Windows\\system32"
@@ -894,9 +951,14 @@ events:
     names:
       - "mt"
     candidate_directories:
-      - "D:/app/MCVS/2026/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/"
-      - "C:/Users/jyoushitou/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "C:/Users/jyoushitou/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "D:/app/VisualStudio/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x86/"
+      - "C:/Program Files (x86)/Windows Kits/10/bin/10.0.26100.0/x86/"
+      - "C:/Program Files (x86)/Microsoft Visual Studio 14.0/Common7/IDE/"
+      - "C:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/"
+      - "C:/Program Files (x86)/Microsoft Visual Studio 14.0/Common7/Tools/"
+      - "C:/Windows/Microsoft.NET/Framework/v4.0.30319/"
+      - "C:/Program Files (x86)/HTML Help Workshop/"
+      - "C:/Program Files (x86)/Windows Kits/10/bin/x86/"
       - "D:/app/VMware/bin/"
       - "C:/Program Files/Common Files/Oracle/Java/javapath/"
       - "C:/Windows/System32/"
@@ -951,179 +1013,20 @@ events:
       - "D:/WebService_Project/Common_CPP/Utils/build/%VCPKG_TOOLS%/protobuf/"
       - "D:/vcpkg/installed/x64-windows/tools/protobuf/"
     searched_directories:
-      - "D:/app/MCVS/2026/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/mt.com"
-      - "D:/app/MCVS/2026/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/mt.exe"
-      - "D:/app/MCVS/2026/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/mt"
-      - "C:/Users/jyoushitou/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/mt.com"
-      - "C:/Users/jyoushitou/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/mt.exe"
-      - "C:/Users/jyoushitou/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/mt"
-      - "C:/Users/jyoushitou/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/mt.com"
-      - "C:/Users/jyoushitou/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/mt.exe"
-      - "C:/Users/jyoushitou/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/mt"
-      - "D:/app/VMware/bin/mt.com"
-      - "D:/app/VMware/bin/mt.exe"
-      - "D:/app/VMware/bin/mt"
-      - "C:/Program Files/Common Files/Oracle/Java/javapath/mt.com"
-      - "C:/Program Files/Common Files/Oracle/Java/javapath/mt.exe"
-      - "C:/Program Files/Common Files/Oracle/Java/javapath/mt"
-      - "C:/Windows/System32/mt.com"
-      - "C:/Windows/System32/mt.exe"
-      - "C:/Windows/System32/mt"
-      - "C:/Windows/mt.com"
-      - "C:/Windows/mt.exe"
-      - "C:/Windows/mt"
-      - "C:/Windows/System32/wbem/mt.com"
-      - "C:/Windows/System32/wbem/mt.exe"
-      - "C:/Windows/System32/wbem/mt"
-      - "C:/Windows/System32/WindowsPowerShell/v1.0/mt.com"
-      - "C:/Windows/System32/WindowsPowerShell/v1.0/mt.exe"
-      - "C:/Windows/System32/WindowsPowerShell/v1.0/mt"
-      - "C:/Windows/System32/OpenSSH/mt.com"
-      - "C:/Windows/System32/OpenSSH/mt.exe"
-      - "C:/Windows/System32/OpenSSH/mt"
-      - "C:/Program Files/NVIDIA Corporation/NVIDIA app/NvDLISR/mt.com"
-      - "C:/Program Files/NVIDIA Corporation/NVIDIA app/NvDLISR/mt.exe"
-      - "C:/Program Files/NVIDIA Corporation/NVIDIA app/NvDLISR/mt"
-      - "C:/Program Files/dotnet/mt.com"
-      - "C:/Program Files/dotnet/mt.exe"
-      - "C:/Program Files/dotnet/mt"
-      - "C:/Program Files/Bandizip/mt.com"
-      - "C:/Program Files/Bandizip/mt.exe"
-      - "C:/Program Files/Bandizip/mt"
-      - "C:/Program Files/MySQL/MySQL Server 8.0/bin/mt.com"
-      - "C:/Program Files/MySQL/MySQL Server 8.0/bin/mt.exe"
-      - "C:/Program Files/MySQL/MySQL Server 8.0/bin/mt"
-      - "C:/mingw/bin/mt.com"
-      - "C:/mingw/bin/mt.exe"
-      - "C:/mingw/bin/mt"
-      - "C:/app/GIT/Git/cmd/mt.com"
-      - "C:/app/GIT/Git/cmd/mt.exe"
-      - "C:/app/GIT/Git/cmd/mt"
-      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/mt.com"
-      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/mt.exe"
-      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/mt"
-      - "D:/path/jdk-17_windows-x64_bin/jdk-17.0.8/bin/mt.com"
-      - "D:/path/jdk-17_windows-x64_bin/jdk-17.0.8/bin/mt.exe"
-      - "D:/path/jdk-17_windows-x64_bin/jdk-17.0.8/bin/mt"
-      - "D:/path/java8/bin/mt.com"
-      - "D:/path/java8/bin/mt.exe"
-      - "D:/path/java8/bin/mt"
-      - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/mt.com"
-      - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/mt.exe"
-      - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/mt"
-      - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/mt.com"
-      - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/mt.exe"
-      - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/mt"
-      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/mt.com"
-      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/mt.exe"
-      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/mt"
-      - "D:/app/golang/bin/mt.com"
-      - "D:/app/golang/bin/mt.exe"
-      - "D:/app/golang/bin/mt"
-      - "E:/app/Cmake/bin/mt.com"
-      - "E:/app/Cmake/bin/mt.exe"
-      - "E:/app/Cmake/bin/mt"
-      - "D:/app/cangjie/bin/mt.com"
-      - "D:/app/cangjie/bin/mt.exe"
-      - "D:/app/cangjie/bin/mt"
-      - "D:/app/cangjie/tools/bin/mt.com"
-      - "D:/app/cangjie/tools/bin/mt.exe"
-      - "D:/app/cangjie/tools/bin/mt"
-      - "D:/app/cangjie/tools/lib/mt.com"
-      - "D:/app/cangjie/tools/lib/mt.exe"
-      - "D:/app/cangjie/tools/lib/mt"
-      - "D:/app/cangjie/runtime/lib/windows_x86_64_cjnative/mt.com"
-      - "D:/app/cangjie/runtime/lib/windows_x86_64_cjnative/mt.exe"
-      - "D:/app/cangjie/runtime/lib/windows_x86_64_cjnative/mt"
-      - "C:/Users/jyoushitou/.cjpm/bin/mt.com"
-      - "C:/Users/jyoushitou/.cjpm/bin/mt.exe"
-      - "C:/Users/jyoushitou/.cjpm/bin/mt"
-      - "C:/Program Files (x86)/ZeroTier/One/mt.com"
-      - "C:/Program Files (x86)/ZeroTier/One/mt.exe"
-      - "C:/Program Files (x86)/ZeroTier/One/mt"
-      - "C:/Program Files/nodejs/mt.com"
-      - "C:/Program Files/nodejs/mt.exe"
-      - "C:/Program Files/nodejs/mt"
-      - "D:/app/XShell/mt.com"
-      - "D:/app/XShell/mt.exe"
-      - "D:/app/XShell/mt"
-      - "C:/Program Files/WireGuard/mt.com"
-      - "C:/Program Files/WireGuard/mt.exe"
-      - "C:/Program Files/WireGuard/mt"
-      - "D:/app/Microsoft VS Code/bin/mt.com"
-      - "D:/app/Microsoft VS Code/bin/mt.exe"
-      - "D:/app/Microsoft VS Code/bin/mt"
-      - "D:/vcpkg/mt.com"
-      - "D:/vcpkg/mt.exe"
-      - "D:/vcpkg/mt"
-      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/mt.com"
-      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/mt.exe"
-      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/mt"
-      - "C:/Program Files/CMake/bin/mt.com"
-      - "C:/Program Files/CMake/bin/mt.exe"
-      - "C:/Program Files/CMake/bin/mt"
-      - "C:/Program Files/Docker/Docker/resources/bin/mt.com"
-      - "C:/Program Files/Docker/Docker/resources/bin/mt.exe"
-      - "C:/Program Files/Docker/Docker/resources/bin/mt"
-      - "D:/app/Python/Scripts/mt.com"
-      - "D:/app/Python/Scripts/mt.exe"
-      - "D:/app/Python/Scripts/mt"
-      - "D:/app/Python/mt.com"
-      - "D:/app/Python/mt.exe"
-      - "D:/app/Python/mt"
-      - "C:/Users/jyoushitou/AppData/Local/Programs/Python/Launcher/mt.com"
-      - "C:/Users/jyoushitou/AppData/Local/Programs/Python/Launcher/mt.exe"
-      - "C:/Users/jyoushitou/AppData/Local/Programs/Python/Launcher/mt"
-      - "C:/Users/jyoushitou/AppData/Local/Microsoft/WindowsApps/mt.com"
-      - "C:/Users/jyoushitou/AppData/Local/Microsoft/WindowsApps/mt.exe"
-      - "C:/Users/jyoushitou/AppData/Local/Microsoft/WindowsApps/mt"
-      - "C:/Users/jyoushitou/.dotnet/tools/mt.com"
-      - "C:/Users/jyoushitou/.dotnet/tools/mt.exe"
-      - "C:/Users/jyoushitou/.dotnet/tools/mt"
-      - "D:/app/DataGrip/DataGrip 2025.3.3/bin/mt.com"
-      - "D:/app/DataGrip/DataGrip 2025.3.3/bin/mt.exe"
-      - "D:/app/DataGrip/DataGrip 2025.3.3/bin/mt"
-      - "D:/app/CLion/CLion 2025.3.1.1/bin/mt.com"
-      - "D:/app/CLion/CLion 2025.3.1.1/bin/mt.exe"
-      - "D:/app/CLion/CLion 2025.3.1.1/bin/mt"
-      - "D:/app/idea/IntelliJ IDEA 2025.3.3/bin/mt.com"
-      - "D:/app/idea/IntelliJ IDEA 2025.3.3/bin/mt.exe"
-      - "D:/app/idea/IntelliJ IDEA 2025.3.3/bin/mt"
-      - "D:/app/pycharm/PyCharm 2025.3.1.1/bin/mt.com"
-      - "D:/app/pycharm/PyCharm 2025.3.1.1/bin/mt.exe"
-      - "D:/app/pycharm/PyCharm 2025.3.1.1/bin/mt"
-      - "C:/Users/jyoushitou/go/binC:/Users/jyoushitou/.dotnet/tools/mt.com"
-      - "C:/Users/jyoushitou/go/binC:/Users/jyoushitou/.dotnet/tools/mt.exe"
-      - "C:/Users/jyoushitou/go/binC:/Users/jyoushitou/.dotnet/tools/mt"
-      - "C:/Users/jyoushitou/AppData/Local/Programs/Tuanjie Cowork/mt.com"
-      - "C:/Users/jyoushitou/AppData/Local/Programs/Tuanjie Cowork/mt.exe"
-      - "C:/Users/jyoushitou/AppData/Local/Programs/Tuanjie Cowork/mt"
-      - "C:/Users/jyoushitou/AppData/Local/Programs/Tuanjie Cowork/cli/bin/win32-x64/mt.com"
-      - "C:/Users/jyoushitou/AppData/Local/Programs/Tuanjie Cowork/cli/bin/win32-x64/mt.exe"
-      - "C:/Users/jyoushitou/AppData/Local/Programs/Tuanjie Cowork/cli/bin/win32-x64/mt"
-      - "C:/Users/jyoushitou/AppData/Roaming/npm/mt.com"
-      - "C:/Users/jyoushitou/AppData/Roaming/npm/mt.exe"
-      - "C:/Users/jyoushitou/AppData/Roaming/npm/mt"
-      - "C:/Users/jyoushitou/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/mt.com"
-      - "C:/Users/jyoushitou/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/mt.exe"
-      - "C:/Users/jyoushitou/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/mt"
-      - "C:/Users/jyoushitou/.cargo/bin/mt.com"
-      - "C:/Users/jyoushitou/.cargo/bin/mt.exe"
-      - "C:/Users/jyoushitou/.cargo/bin/mt"
-      - "C:/Users/jyoushitou/AppData/Local/Microsoft/WinGet/Links/mt.com"
-      - "C:/Users/jyoushitou/AppData/Local/Microsoft/WinGet/Links/mt.exe"
-      - "C:/Users/jyoushitou/AppData/Local/Microsoft/WinGet/Links/mt"
-      - "D:/WebService_Project/Common_CPP/Utils/build/%VCPKG_TOOLS%/protobuf/mt.com"
-      - "D:/WebService_Project/Common_CPP/Utils/build/%VCPKG_TOOLS%/protobuf/mt.exe"
-      - "D:/WebService_Project/Common_CPP/Utils/build/%VCPKG_TOOLS%/protobuf/mt"
-      - "D:/vcpkg/installed/x64-windows/tools/protobuf/mt.com"
-      - "D:/vcpkg/installed/x64-windows/tools/protobuf/mt.exe"
-      - "D:/vcpkg/installed/x64-windows/tools/protobuf/mt"
-    found: false
+      - "D:/app/VisualStudio/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x86/mt.com"
+      - "D:/app/VisualStudio/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x86/mt.exe"
+      - "D:/app/VisualStudio/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x86/mt"
+      - "C:/Program Files (x86)/Windows Kits/10/bin/10.0.26100.0/x86/mt.com"
+    found: "C:/Program Files (x86)/Windows Kits/10/bin/10.0.26100.0/x86/mt.exe"
     search_context:
       ENV{PATH}:
-        - "c:\\Users\\jyoushitou\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
-        - "c:\\Users\\jyoushitou\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.26100.0\\x86"
+        - "C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\Common7\\IDE\\"
+        - "C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\VC\\BIN"
+        - "C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\Common7\\Tools"
+        - "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319"
+        - "C:\\Program Files (x86)\\HTML Help Workshop"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\bin\\x86"
         - "D:\\app\\VMware\\bin\\"
         - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
         - "C:\\Windows\\system32"
@@ -1233,9 +1136,14 @@ events:
     names:
       - "lib"
     candidate_directories:
-      - "D:/app/MCVS/2026/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/"
-      - "C:/Users/jyoushitou/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "C:/Users/jyoushitou/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "D:/app/VisualStudio/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x86/"
+      - "C:/Program Files (x86)/Windows Kits/10/bin/10.0.26100.0/x86/"
+      - "C:/Program Files (x86)/Microsoft Visual Studio 14.0/Common7/IDE/"
+      - "C:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/"
+      - "C:/Program Files (x86)/Microsoft Visual Studio 14.0/Common7/Tools/"
+      - "C:/Windows/Microsoft.NET/Framework/v4.0.30319/"
+      - "C:/Program Files (x86)/HTML Help Workshop/"
+      - "C:/Program Files (x86)/Windows Kits/10/bin/x86/"
       - "D:/app/VMware/bin/"
       - "C:/Program Files/Common Files/Oracle/Java/javapath/"
       - "C:/Windows/System32/"
@@ -1290,12 +1198,17 @@ events:
       - "D:/WebService_Project/Common_CPP/Utils/build/%VCPKG_TOOLS%/protobuf/"
       - "D:/vcpkg/installed/x64-windows/tools/protobuf/"
     searched_directories:
-      - "D:/app/MCVS/2026/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/lib.com"
-    found: "D:/app/MCVS/2026/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/lib.exe"
+      - "D:/app/VisualStudio/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x86/lib.com"
+    found: "D:/app/VisualStudio/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x86/lib.exe"
     search_context:
       ENV{PATH}:
-        - "c:\\Users\\jyoushitou\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
-        - "c:\\Users\\jyoushitou\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.26100.0\\x86"
+        - "C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\Common7\\IDE\\"
+        - "C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\VC\\BIN"
+        - "C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\Common7\\Tools"
+        - "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319"
+        - "C:\\Program Files (x86)\\HTML Help Workshop"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\bin\\x86"
         - "D:\\app\\VMware\\bin\\"
         - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
         - "C:\\Windows\\system32"
@@ -1408,8 +1321,13 @@ events:
     names:
       - "rc"
     candidate_directories:
-      - "C:/Users/jyoushitou/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "C:/Users/jyoushitou/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "C:/Program Files (x86)/Windows Kits/10/bin/10.0.26100.0/x86/"
+      - "C:/Program Files (x86)/Microsoft Visual Studio 14.0/Common7/IDE/"
+      - "C:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/"
+      - "C:/Program Files (x86)/Microsoft Visual Studio 14.0/Common7/Tools/"
+      - "C:/Windows/Microsoft.NET/Framework/v4.0.30319/"
+      - "C:/Program Files (x86)/HTML Help Workshop/"
+      - "C:/Program Files (x86)/Windows Kits/10/bin/x86/"
       - "D:/app/VMware/bin/"
       - "C:/Program Files/Common Files/Oracle/Java/javapath/"
       - "C:/Windows/System32/"
@@ -1476,212 +1394,17 @@ events:
       - "C:/Program Files (x86)/Utils/sbin/"
       - "C:/Program Files (x86)/Utils/"
     searched_directories:
-      - "C:/Users/jyoushitou/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/rc.com"
-      - "C:/Users/jyoushitou/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/rc.exe"
-      - "C:/Users/jyoushitou/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/rc"
-      - "C:/Users/jyoushitou/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/rc.com"
-      - "C:/Users/jyoushitou/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/rc.exe"
-      - "C:/Users/jyoushitou/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/rc"
-      - "D:/app/VMware/bin/rc.com"
-      - "D:/app/VMware/bin/rc.exe"
-      - "D:/app/VMware/bin/rc"
-      - "C:/Program Files/Common Files/Oracle/Java/javapath/rc.com"
-      - "C:/Program Files/Common Files/Oracle/Java/javapath/rc.exe"
-      - "C:/Program Files/Common Files/Oracle/Java/javapath/rc"
-      - "C:/Windows/System32/rc.com"
-      - "C:/Windows/System32/rc.exe"
-      - "C:/Windows/System32/rc"
-      - "C:/Windows/rc.com"
-      - "C:/Windows/rc.exe"
-      - "C:/Windows/rc"
-      - "C:/Windows/System32/wbem/rc.com"
-      - "C:/Windows/System32/wbem/rc.exe"
-      - "C:/Windows/System32/wbem/rc"
-      - "C:/Windows/System32/WindowsPowerShell/v1.0/rc.com"
-      - "C:/Windows/System32/WindowsPowerShell/v1.0/rc.exe"
-      - "C:/Windows/System32/WindowsPowerShell/v1.0/rc"
-      - "C:/Windows/System32/OpenSSH/rc.com"
-      - "C:/Windows/System32/OpenSSH/rc.exe"
-      - "C:/Windows/System32/OpenSSH/rc"
-      - "C:/Program Files/NVIDIA Corporation/NVIDIA app/NvDLISR/rc.com"
-      - "C:/Program Files/NVIDIA Corporation/NVIDIA app/NvDLISR/rc.exe"
-      - "C:/Program Files/NVIDIA Corporation/NVIDIA app/NvDLISR/rc"
-      - "C:/Program Files/dotnet/rc.com"
-      - "C:/Program Files/dotnet/rc.exe"
-      - "C:/Program Files/dotnet/rc"
-      - "C:/Program Files/Bandizip/rc.com"
-      - "C:/Program Files/Bandizip/rc.exe"
-      - "C:/Program Files/Bandizip/rc"
-      - "C:/Program Files/MySQL/MySQL Server 8.0/bin/rc.com"
-      - "C:/Program Files/MySQL/MySQL Server 8.0/bin/rc.exe"
-      - "C:/Program Files/MySQL/MySQL Server 8.0/bin/rc"
-      - "C:/mingw/bin/rc.com"
-      - "C:/mingw/bin/rc.exe"
-      - "C:/mingw/bin/rc"
-      - "C:/app/GIT/Git/cmd/rc.com"
-      - "C:/app/GIT/Git/cmd/rc.exe"
-      - "C:/app/GIT/Git/cmd/rc"
-      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/rc.com"
-      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/rc.exe"
-      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/rc"
-      - "D:/path/jdk-17_windows-x64_bin/jdk-17.0.8/bin/rc.com"
-      - "D:/path/jdk-17_windows-x64_bin/jdk-17.0.8/bin/rc.exe"
-      - "D:/path/jdk-17_windows-x64_bin/jdk-17.0.8/bin/rc"
-      - "D:/path/java8/bin/rc.com"
-      - "D:/path/java8/bin/rc.exe"
-      - "D:/path/java8/bin/rc"
-      - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/rc.com"
-      - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/rc.exe"
-      - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/rc"
-      - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/rc.com"
-      - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/rc.exe"
-      - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/rc"
-      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/rc.com"
-      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/rc.exe"
-      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/rc"
-      - "D:/app/golang/bin/rc.com"
-      - "D:/app/golang/bin/rc.exe"
-      - "D:/app/golang/bin/rc"
-      - "E:/app/Cmake/bin/rc.com"
-      - "E:/app/Cmake/bin/rc.exe"
-      - "E:/app/Cmake/bin/rc"
-      - "D:/app/cangjie/bin/rc.com"
-      - "D:/app/cangjie/bin/rc.exe"
-      - "D:/app/cangjie/bin/rc"
-      - "D:/app/cangjie/tools/bin/rc.com"
-      - "D:/app/cangjie/tools/bin/rc.exe"
-      - "D:/app/cangjie/tools/bin/rc"
-      - "D:/app/cangjie/tools/lib/rc.com"
-      - "D:/app/cangjie/tools/lib/rc.exe"
-      - "D:/app/cangjie/tools/lib/rc"
-      - "D:/app/cangjie/runtime/lib/windows_x86_64_cjnative/rc.com"
-      - "D:/app/cangjie/runtime/lib/windows_x86_64_cjnative/rc.exe"
-      - "D:/app/cangjie/runtime/lib/windows_x86_64_cjnative/rc"
-      - "C:/Users/jyoushitou/.cjpm/bin/rc.com"
-      - "C:/Users/jyoushitou/.cjpm/bin/rc.exe"
-      - "C:/Users/jyoushitou/.cjpm/bin/rc"
-      - "C:/Program Files (x86)/ZeroTier/One/rc.com"
-      - "C:/Program Files (x86)/ZeroTier/One/rc.exe"
-      - "C:/Program Files (x86)/ZeroTier/One/rc"
-      - "C:/Program Files/nodejs/rc.com"
-      - "C:/Program Files/nodejs/rc.exe"
-      - "C:/Program Files/nodejs/rc"
-      - "D:/app/XShell/rc.com"
-      - "D:/app/XShell/rc.exe"
-      - "D:/app/XShell/rc"
-      - "C:/Program Files/WireGuard/rc.com"
-      - "C:/Program Files/WireGuard/rc.exe"
-      - "C:/Program Files/WireGuard/rc"
-      - "D:/app/Microsoft VS Code/bin/rc.com"
-      - "D:/app/Microsoft VS Code/bin/rc.exe"
-      - "D:/app/Microsoft VS Code/bin/rc"
-      - "D:/vcpkg/rc.com"
-      - "D:/vcpkg/rc.exe"
-      - "D:/vcpkg/rc"
-      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/rc.com"
-      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/rc.exe"
-      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/rc"
-      - "C:/Program Files/CMake/bin/rc.com"
-      - "C:/Program Files/CMake/bin/rc.exe"
-      - "C:/Program Files/CMake/bin/rc"
-      - "C:/Program Files/Docker/Docker/resources/bin/rc.com"
-      - "C:/Program Files/Docker/Docker/resources/bin/rc.exe"
-      - "C:/Program Files/Docker/Docker/resources/bin/rc"
-      - "D:/app/Python/Scripts/rc.com"
-      - "D:/app/Python/Scripts/rc.exe"
-      - "D:/app/Python/Scripts/rc"
-      - "D:/app/Python/rc.com"
-      - "D:/app/Python/rc.exe"
-      - "D:/app/Python/rc"
-      - "C:/Users/jyoushitou/AppData/Local/Programs/Python/Launcher/rc.com"
-      - "C:/Users/jyoushitou/AppData/Local/Programs/Python/Launcher/rc.exe"
-      - "C:/Users/jyoushitou/AppData/Local/Programs/Python/Launcher/rc"
-      - "C:/Users/jyoushitou/AppData/Local/Microsoft/WindowsApps/rc.com"
-      - "C:/Users/jyoushitou/AppData/Local/Microsoft/WindowsApps/rc.exe"
-      - "C:/Users/jyoushitou/AppData/Local/Microsoft/WindowsApps/rc"
-      - "C:/Users/jyoushitou/.dotnet/tools/rc.com"
-      - "C:/Users/jyoushitou/.dotnet/tools/rc.exe"
-      - "C:/Users/jyoushitou/.dotnet/tools/rc"
-      - "D:/app/DataGrip/DataGrip 2025.3.3/bin/rc.com"
-      - "D:/app/DataGrip/DataGrip 2025.3.3/bin/rc.exe"
-      - "D:/app/DataGrip/DataGrip 2025.3.3/bin/rc"
-      - "D:/app/CLion/CLion 2025.3.1.1/bin/rc.com"
-      - "D:/app/CLion/CLion 2025.3.1.1/bin/rc.exe"
-      - "D:/app/CLion/CLion 2025.3.1.1/bin/rc"
-      - "D:/app/idea/IntelliJ IDEA 2025.3.3/bin/rc.com"
-      - "D:/app/idea/IntelliJ IDEA 2025.3.3/bin/rc.exe"
-      - "D:/app/idea/IntelliJ IDEA 2025.3.3/bin/rc"
-      - "D:/app/pycharm/PyCharm 2025.3.1.1/bin/rc.com"
-      - "D:/app/pycharm/PyCharm 2025.3.1.1/bin/rc.exe"
-      - "D:/app/pycharm/PyCharm 2025.3.1.1/bin/rc"
-      - "C:/Users/jyoushitou/go/binC:/Users/jyoushitou/.dotnet/tools/rc.com"
-      - "C:/Users/jyoushitou/go/binC:/Users/jyoushitou/.dotnet/tools/rc.exe"
-      - "C:/Users/jyoushitou/go/binC:/Users/jyoushitou/.dotnet/tools/rc"
-      - "C:/Users/jyoushitou/AppData/Local/Programs/Tuanjie Cowork/rc.com"
-      - "C:/Users/jyoushitou/AppData/Local/Programs/Tuanjie Cowork/rc.exe"
-      - "C:/Users/jyoushitou/AppData/Local/Programs/Tuanjie Cowork/rc"
-      - "C:/Users/jyoushitou/AppData/Local/Programs/Tuanjie Cowork/cli/bin/win32-x64/rc.com"
-      - "C:/Users/jyoushitou/AppData/Local/Programs/Tuanjie Cowork/cli/bin/win32-x64/rc.exe"
-      - "C:/Users/jyoushitou/AppData/Local/Programs/Tuanjie Cowork/cli/bin/win32-x64/rc"
-      - "C:/Users/jyoushitou/AppData/Roaming/npm/rc.com"
-      - "C:/Users/jyoushitou/AppData/Roaming/npm/rc.exe"
-      - "C:/Users/jyoushitou/AppData/Roaming/npm/rc"
-      - "C:/Users/jyoushitou/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/rc.com"
-      - "C:/Users/jyoushitou/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/rc.exe"
-      - "C:/Users/jyoushitou/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/rc"
-      - "C:/Users/jyoushitou/.cargo/bin/rc.com"
-      - "C:/Users/jyoushitou/.cargo/bin/rc.exe"
-      - "C:/Users/jyoushitou/.cargo/bin/rc"
-      - "C:/Users/jyoushitou/AppData/Local/Microsoft/WinGet/Links/rc.com"
-      - "C:/Users/jyoushitou/AppData/Local/Microsoft/WinGet/Links/rc.exe"
-      - "C:/Users/jyoushitou/AppData/Local/Microsoft/WinGet/Links/rc"
-      - "D:/WebService_Project/Common_CPP/Utils/build/%VCPKG_TOOLS%/protobuf/rc.com"
-      - "D:/WebService_Project/Common_CPP/Utils/build/%VCPKG_TOOLS%/protobuf/rc.exe"
-      - "D:/WebService_Project/Common_CPP/Utils/build/%VCPKG_TOOLS%/protobuf/rc"
-      - "D:/vcpkg/installed/x64-windows/tools/protobuf/rc.com"
-      - "D:/vcpkg/installed/x64-windows/tools/protobuf/rc.exe"
-      - "D:/vcpkg/installed/x64-windows/tools/protobuf/rc"
-      - "C:/Program Files/bin/rc.com"
-      - "C:/Program Files/bin/rc.exe"
-      - "C:/Program Files/bin/rc"
-      - "C:/Program Files/sbin/rc.com"
-      - "C:/Program Files/sbin/rc.exe"
-      - "C:/Program Files/sbin/rc"
-      - "C:/Program Files/rc.com"
-      - "C:/Program Files/rc.exe"
-      - "C:/Program Files/rc"
-      - "C:/Program Files (x86)/bin/rc.com"
-      - "C:/Program Files (x86)/bin/rc.exe"
-      - "C:/Program Files (x86)/bin/rc"
-      - "C:/Program Files (x86)/sbin/rc.com"
-      - "C:/Program Files (x86)/sbin/rc.exe"
-      - "C:/Program Files (x86)/sbin/rc"
-      - "C:/Program Files (x86)/rc.com"
-      - "C:/Program Files (x86)/rc.exe"
-      - "C:/Program Files (x86)/rc"
-      - "E:/app/Cmake/bin/rc.com"
-      - "E:/app/Cmake/bin/rc.exe"
-      - "E:/app/Cmake/bin/rc"
-      - "E:/app/Cmake/sbin/rc.com"
-      - "E:/app/Cmake/sbin/rc.exe"
-      - "E:/app/Cmake/sbin/rc"
-      - "E:/app/Cmake/rc.com"
-      - "E:/app/Cmake/rc.exe"
-      - "E:/app/Cmake/rc"
-      - "C:/Program Files (x86)/Utils/bin/rc.com"
-      - "C:/Program Files (x86)/Utils/bin/rc.exe"
-      - "C:/Program Files (x86)/Utils/bin/rc"
-      - "C:/Program Files (x86)/Utils/sbin/rc.com"
-      - "C:/Program Files (x86)/Utils/sbin/rc.exe"
-      - "C:/Program Files (x86)/Utils/sbin/rc"
-      - "C:/Program Files (x86)/Utils/rc.com"
-      - "C:/Program Files (x86)/Utils/rc.exe"
-      - "C:/Program Files (x86)/Utils/rc"
-    found: false
+      - "C:/Program Files (x86)/Windows Kits/10/bin/10.0.26100.0/x86/rc.com"
+    found: "C:/Program Files (x86)/Windows Kits/10/bin/10.0.26100.0/x86/rc.exe"
     search_context:
       ENV{PATH}:
-        - "c:\\Users\\jyoushitou\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
-        - "c:\\Users\\jyoushitou\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.26100.0\\x86"
+        - "C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\Common7\\IDE\\"
+        - "C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\VC\\BIN"
+        - "C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\Common7\\Tools"
+        - "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319"
+        - "C:\\Program Files (x86)\\HTML Help Workshop"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\bin\\x86"
         - "D:\\app\\VMware\\bin\\"
         - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
         - "C:\\Windows\\system32"
@@ -1786,57 +1509,57 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "D:/WebService_Project/Common_CPP/Utils/build/CMakeFiles/CMakeScratch/TryCompile-l2dbj0"
-      binary: "D:/WebService_Project/Common_CPP/Utils/build/CMakeFiles/CMakeScratch/TryCompile-l2dbj0"
+      source: "D:/WebService_Project/Common_CPP/Utils/build/CMakeFiles/CMakeScratch/TryCompile-7sh4no"
+      binary: "D:/WebService_Project/Common_CPP/Utils/build/CMakeFiles/CMakeScratch/TryCompile-7sh4no"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /GR /EHsc"
       CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
       CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
       CMAKE_CXX_STDLIB_MODULES_JSON: ""
-      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:X86"
     buildResult:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'D:/WebService_Project/Common_CPP/Utils/build/CMakeFiles/CMakeScratch/TryCompile-l2dbj0'
+        Change Dir: 'D:/WebService_Project/Common_CPP/Utils/build/CMakeFiles/CMakeScratch/TryCompile-7sh4no'
         
-        Run Build Command(s): D:/app/MCVS/2026/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_94a88.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=18.0 /v:n
-        閫傜敤浜?.NET Framework MSBuild 鐗堟湰 18.4.0+6e61e96ac
-        鐢熸垚鍚姩鏃堕棿涓?2026/10/1 19:01:50銆?
+        Run Build Command(s): D:/app/VisualStudio/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_a88e4.vcxproj /p:Configuration=Debug /p:Platform=Win32 /p:VisualStudioVersion=17.0 /v:n
+        閫傜敤浜?.NET Framework MSBuild 鐗堟湰 17.14.40+3e7442088
+        鐢熸垚鍚姩鏃堕棿涓?2026/10/1 19:38:43銆?
         
-        鑺傜偣 1 涓婄殑椤圭洰鈥淒:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-l2dbj0\\cmTC_94a88.vcxproj鈥?榛樿鐩爣)銆?
+        鑺傜偣 1 涓婄殑椤圭洰鈥淒:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-7sh4no\\cmTC_a88e4.vcxproj鈥?榛樿鐩爣)銆?
         PrepareForBuild:
           宸插惎鐢ㄧ粨鏋勫寲杈撳嚭銆傜紪璇戝櫒璇婃柇鐨勬牸寮忚缃皢鍙嶆槧閿欒灞傛缁撴瀯銆傛湁鍏宠缁嗕俊鎭紝璇峰弬闃?https://aka.ms/cpp/structured-output銆?
-          姝ｅ湪鍒涘缓鐩綍鈥淒:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-l2dbj0\\Debug\\鈥濄€?
-          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_94a88.dir\\Debug\\cmTC_94a88.tlog\\鈥濄€?
+          姝ｅ湪鍒涘缓鐩綍鈥淒:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-7sh4no\\Debug\\鈥濄€?
+          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_a88e4.dir\\Debug\\cmTC_a88e4.tlog\\鈥濄€?
         InitializeBuildStatus:
-          姝ｅ湪鍒涘缓鈥渃mTC_94a88.dir\\Debug\\cmTC_94a88.tlog\\unsuccessfulbuild鈥濓紝鍥犱负宸叉寚瀹氣€淎lwaysCreate鈥濄€?
-          姝ｅ湪瀵光€渃mTC_94a88.dir\\Debug\\cmTC_94a88.tlog\\unsuccessfulbuild鈥濇墽琛?Touch 浠诲姟銆?
+          姝ｅ湪鍒涘缓鈥渃mTC_a88e4.dir\\Debug\\cmTC_a88e4.tlog\\unsuccessfulbuild鈥濓紝鍥犱负宸叉寚瀹氣€淎lwaysCreate鈥濄€?
+          姝ｅ湪瀵光€渃mTC_a88e4.dir\\Debug\\cmTC_a88e4.tlog\\unsuccessfulbuild鈥濇墽琛?Touch 浠诲姟銆?
         VcpkgTripletSelection:
-          Using triplet "x64-windows" from "D:\\vcpkg\\installed\\x64-windows\\"
+          Using triplet "x86-windows" from "D:\\vcpkg\\installed\\x86-windows\\"
           Using normalized configuration "Debug"
         ClCompile:
-          D:\\app\\MCVS\\2026\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\CL.exe /c /I"D:\\vcpkg\\installed\\x64-windows\\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /Fo"cmTC_94a88.dir\\Debug\\\\" /Fd"cmTC_94a88.dir\\Debug\\vc145.pdb" /external:W1 /TP /errorReport:queue "E:\\app\\Cmake\\share\\cmake-4.3\\Modules\\CMakeCXXCompilerABI.cpp"
-          鐢ㄤ簬 x64 鐨?Microsoft (R) C/C++ 浼樺寲缂栬瘧鍣?19.50.35725 鐗?
+          D:\\app\\VisualStudio\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x86\\CL.exe /c /I"D:\\vcpkg\\installed\\x86-windows\\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /Fo"cmTC_a88e4.dir\\Debug\\\\" /Fd"cmTC_a88e4.dir\\Debug\\vc143.pdb" /external:W1 /TP /analyze- /errorReport:queue "E:\\app\\Cmake\\share\\cmake-4.3\\Modules\\CMakeCXXCompilerABI.cpp"
+          鐢ㄤ簬 x86 鐨?Microsoft (R) C/C++ 浼樺寲缂栬瘧鍣?19.44.35223 鐗?
           鐗堟潈鎵€鏈?C) Microsoft Corporation銆備繚鐣欐墍鏈夋潈鍒┿€?
-          cl /c /I"D:\\vcpkg\\installed\\x64-windows\\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /Fo"cmTC_94a88.dir\\Debug\\\\" /Fd"cmTC_94a88.dir\\Debug\\vc145.pdb" /external:W1 /TP /errorReport:queue "E:\\app\\Cmake\\share\\cmake-4.3\\Modules\\CMakeCXXCompilerABI.cpp"
+          cl /c /I"D:\\vcpkg\\installed\\x86-windows\\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /Fo"cmTC_a88e4.dir\\Debug\\\\" /Fd"cmTC_a88e4.dir\\Debug\\vc143.pdb" /external:W1 /TP /analyze- /errorReport:queue "E:\\app\\Cmake\\share\\cmake-4.3\\Modules\\CMakeCXXCompilerABI.cpp"
           CMakeCXXCompilerABI.cpp
         Link:
-          D:\\app\\MCVS\\2026\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\link.exe /OUT:"D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-l2dbj0\\Debug\\cmTC_94a88.exe" /INCREMENTAL /ILK:"cmTC_94a88.dir\\Debug\\cmTC_94a88.ilk" /NOLOGO /LIBPATH:"D:\\vcpkg\\installed\\x64-windows\\debug\\lib" /LIBPATH:"D:\\vcpkg\\installed\\x64-windows\\debug\\lib\\manual-link" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib "D:\\vcpkg\\installed\\x64-windows\\debug\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/WebService_Project/Common_CPP/Utils/build/CMakeFiles/CMakeScratch/TryCompile-l2dbj0/Debug/cmTC_94a88.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"D:/WebService_Project/Common_CPP/Utils/build/CMakeFiles/CMakeScratch/TryCompile-l2dbj0/Debug/cmTC_94a88.lib" /MACHINE:X64  /machine:x64 cmTC_94a88.dir\\Debug\\CMakeCXXCompilerABI.obj
-          cmTC_94a88.vcxproj -> D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-l2dbj0\\Debug\\cmTC_94a88.exe
+          D:\\app\\VisualStudio\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x86\\link.exe /OUT:"D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-7sh4no\\Debug\\cmTC_a88e4.exe" /INCREMENTAL /ILK:"cmTC_a88e4.dir\\Debug\\cmTC_a88e4.ilk" /NOLOGO /LIBPATH:"D:\\vcpkg\\installed\\x86-windows\\debug\\lib" /LIBPATH:"D:\\vcpkg\\installed\\x86-windows\\debug\\lib\\manual-link" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib "D:\\vcpkg\\installed\\x86-windows\\debug\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/WebService_Project/Common_CPP/Utils/build/CMakeFiles/CMakeScratch/TryCompile-7sh4no/Debug/cmTC_a88e4.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"D:/WebService_Project/Common_CPP/Utils/build/CMakeFiles/CMakeScratch/TryCompile-7sh4no/Debug/cmTC_a88e4.lib" /MACHINE:X86  /machine:X86 cmTC_a88e4.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_a88e4.vcxproj -> D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-7sh4no\\Debug\\cmTC_a88e4.exe
         AppLocalFromInstalled:
-          "D:\\vcpkg\\vcpkg.exe" z-applocal --target-binary="D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-l2dbj0\\Debug\\cmTC_94a88.exe" --installed-bin-dir="D:\\vcpkg\\installed\\x64-windows\\debug\\bin" --tlog-file="cmTC_94a88.dir\\Debug\\cmTC_94a88.tlog\\cmTC_94a88.write.1u.tlog" --copied-files-log="cmTC_94a88.dir\\Debug\\vcpkg.applocal.log"
-          D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-l2dbj0\\Debug\\cmTC_94a88.exe: message: deploying dependencies
+          "D:\\vcpkg\\vcpkg.exe" z-applocal --target-binary="D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-7sh4no\\Debug\\cmTC_a88e4.exe" --installed-bin-dir="D:\\vcpkg\\installed\\x86-windows\\debug\\bin" --tlog-file="cmTC_a88e4.dir\\Debug\\cmTC_a88e4.tlog\\cmTC_a88e4.write.1u.tlog" --copied-files-log="cmTC_a88e4.dir\\Debug\\vcpkg.applocal.log"
+          D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-7sh4no\\Debug\\cmTC_a88e4.exe: message: deploying dependencies
         FinalizeBuildStatus:
-          姝ｅ湪鍒犻櫎鏂囦欢鈥渃mTC_94a88.dir\\Debug\\cmTC_94a88.tlog\\unsuccessfulbuild鈥濄€?
-          姝ｅ湪瀵光€渃mTC_94a88.dir\\Debug\\cmTC_94a88.tlog\\cmTC_94a88.lastbuildstate鈥濇墽琛?Touch 浠诲姟銆?
-        宸插畬鎴愮敓鎴愰」鐩€淒:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-l2dbj0\\cmTC_94a88.vcxproj鈥?榛樿鐩爣)鐨勬搷浣溿€?
+          姝ｅ湪鍒犻櫎鏂囦欢鈥渃mTC_a88e4.dir\\Debug\\cmTC_a88e4.tlog\\unsuccessfulbuild鈥濄€?
+          姝ｅ湪瀵光€渃mTC_a88e4.dir\\Debug\\cmTC_a88e4.tlog\\cmTC_a88e4.lastbuildstate鈥濇墽琛?Touch 浠诲姟銆?
+        宸插畬鎴愮敓鎴愰」鐩€淒:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-7sh4no\\cmTC_a88e4.vcxproj鈥?榛樿鐩爣)鐨勬搷浣溿€?
         
         宸叉垚鍔熺敓鎴愩€?
             0 涓鍛?
             0 涓敊璇?
         
-        宸茬敤鏃堕棿 00:00:01.06
+        宸茬敤鏃堕棿 00:00:00.86
         
       exitCode: 0
   -
@@ -1849,7 +1572,7 @@ events:
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
-        linker tool for 'CXX': D:/app/MCVS/2026/VC/Tools/MSVC/14.50.35717/bin/HostX64/x64/link.exe
+        linker tool for 'CXX': D:/app/VisualStudio/VC/Tools/MSVC/14.44.35207/bin/HostX64/x86/link.exe
         implicit libs: []
         implicit objs: []
         implicit dirs: []
@@ -1864,8 +1587,8 @@ events:
       - "E:/app/Cmake/share/cmake-4.3/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
       - "CMakeLists.txt:5 (project)"
     message: |
-      Running the CXX compiler's linker: "D:/app/MCVS/2026/VC/Tools/MSVC/14.50.35717/bin/HostX64/x64/link.exe" "-v"
-      Microsoft (R) Incremental Linker Version 14.50.35725.0
+      Running the CXX compiler's linker: "D:/app/VisualStudio/VC/Tools/MSVC/14.44.35207/bin/HostX64/x86/link.exe" "-v"
+      Microsoft (R) Incremental Linker Version 14.44.35223.0
       Copyright (C) Microsoft Corporation.  All rights reserved.
   -
     kind: "try_compile-v1"
@@ -1879,63 +1602,63 @@ events:
     checks:
       - "Performing Test COMPILER_HAS_DEPRECATED_ATTR"
     directories:
-      source: "D:/WebService_Project/Common_CPP/Utils/build/CMakeFiles/CMakeScratch/TryCompile-4y5pkb"
-      binary: "D:/WebService_Project/Common_CPP/Utils/build/CMakeFiles/CMakeScratch/TryCompile-4y5pkb"
+      source: "D:/WebService_Project/Common_CPP/Utils/build/CMakeFiles/CMakeScratch/TryCompile-yzxtyc"
+      binary: "D:/WebService_Project/Common_CPP/Utils/build/CMakeFiles/CMakeScratch/TryCompile-yzxtyc"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /GR /EHsc"
       CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
       CMAKE_CXX_STDLIB_MODULES_JSON: ""
-      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:X86"
     buildResult:
       variable: "COMPILER_HAS_DEPRECATED_ATTR"
       cached: true
       stdout: |
-        Change Dir: 'D:/WebService_Project/Common_CPP/Utils/build/CMakeFiles/CMakeScratch/TryCompile-4y5pkb'
+        Change Dir: 'D:/WebService_Project/Common_CPP/Utils/build/CMakeFiles/CMakeScratch/TryCompile-yzxtyc'
         
-        Run Build Command(s): D:/app/MCVS/2026/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_ce690.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=18.0 /v:n
-        閫傜敤浜?.NET Framework MSBuild 鐗堟湰 18.4.0+6e61e96ac
-        鐢熸垚鍚姩鏃堕棿涓?2026/10/1 19:01:51銆?
+        Run Build Command(s): D:/app/VisualStudio/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_0fd58.vcxproj /p:Configuration=Debug /p:Platform=Win32 /p:VisualStudioVersion=17.0 /v:n
+        閫傜敤浜?.NET Framework MSBuild 鐗堟湰 17.14.40+3e7442088
+        鐢熸垚鍚姩鏃堕棿涓?2026/10/1 19:38:44銆?
         
-        鑺傜偣 1 涓婄殑椤圭洰鈥淒:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4y5pkb\\cmTC_ce690.vcxproj鈥?榛樿鐩爣)銆?
+        鑺傜偣 1 涓婄殑椤圭洰鈥淒:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-yzxtyc\\cmTC_0fd58.vcxproj鈥?榛樿鐩爣)銆?
         PrepareForBuild:
           宸插惎鐢ㄧ粨鏋勫寲杈撳嚭銆傜紪璇戝櫒璇婃柇鐨勬牸寮忚缃皢鍙嶆槧閿欒灞傛缁撴瀯銆傛湁鍏宠缁嗕俊鎭紝璇峰弬闃?https://aka.ms/cpp/structured-output銆?
-          姝ｅ湪鍒涘缓鐩綍鈥淒:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4y5pkb\\Debug\\鈥濄€?
-          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_ce690.dir\\Debug\\cmTC_ce690.tlog\\鈥濄€?
+          姝ｅ湪鍒涘缓鐩綍鈥淒:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-yzxtyc\\Debug\\鈥濄€?
+          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_0fd58.dir\\Debug\\cmTC_0fd58.tlog\\鈥濄€?
         InitializeBuildStatus:
-          姝ｅ湪鍒涘缓鈥渃mTC_ce690.dir\\Debug\\cmTC_ce690.tlog\\unsuccessfulbuild鈥濓紝鍥犱负宸叉寚瀹氣€淎lwaysCreate鈥濄€?
-          姝ｅ湪瀵光€渃mTC_ce690.dir\\Debug\\cmTC_ce690.tlog\\unsuccessfulbuild鈥濇墽琛?Touch 浠诲姟銆?
+          姝ｅ湪鍒涘缓鈥渃mTC_0fd58.dir\\Debug\\cmTC_0fd58.tlog\\unsuccessfulbuild鈥濓紝鍥犱负宸叉寚瀹氣€淎lwaysCreate鈥濄€?
+          姝ｅ湪瀵光€渃mTC_0fd58.dir\\Debug\\cmTC_0fd58.tlog\\unsuccessfulbuild鈥濇墽琛?Touch 浠诲姟銆?
         VcpkgTripletSelection:
-          Using triplet "x64-windows" from "D:\\vcpkg\\installed\\x64-windows\\"
+          Using triplet "x86-windows" from "D:\\vcpkg\\installed\\x86-windows\\"
           Using normalized configuration "Debug"
         ClCompile:
-          D:\\app\\MCVS\\2026\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\CL.exe /c /I"D:\\vcpkg\\installed\\x64-windows\\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D COMPILER_HAS_DEPRECATED_ATTR /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /std:c++17 /Fo"cmTC_ce690.dir\\Debug\\\\" /Fd"cmTC_ce690.dir\\Debug\\vc145.pdb" /external:W1 /TP /errorReport:queue "D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4y5pkb\\src.cxx"
-          鐢ㄤ簬 x64 鐨?Microsoft (R) C/C++ 浼樺寲缂栬瘧鍣?19.50.35725 鐗?
+          D:\\app\\VisualStudio\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x86\\CL.exe /c /I"D:\\vcpkg\\installed\\x86-windows\\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D COMPILER_HAS_DEPRECATED_ATTR /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /std:c++17 /Fo"cmTC_0fd58.dir\\Debug\\\\" /Fd"cmTC_0fd58.dir\\Debug\\vc143.pdb" /external:W1 /TP /analyze- /errorReport:queue "D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-yzxtyc\\src.cxx"
+          鐢ㄤ簬 x86 鐨?Microsoft (R) C/C++ 浼樺寲缂栬瘧鍣?19.44.35223 鐗?
           鐗堟潈鎵€鏈?C) Microsoft Corporation銆備繚鐣欐墍鏈夋潈鍒┿€?
-          cl /c /I"D:\\vcpkg\\installed\\x64-windows\\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D COMPILER_HAS_DEPRECATED_ATTR /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /std:c++17 /Fo"cmTC_ce690.dir\\Debug\\\\" /Fd"cmTC_ce690.dir\\Debug\\vc145.pdb" /external:W1 /TP /errorReport:queue "D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4y5pkb\\src.cxx"
+          cl /c /I"D:\\vcpkg\\installed\\x86-windows\\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D COMPILER_HAS_DEPRECATED_ATTR /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /std:c++17 /Fo"cmTC_0fd58.dir\\Debug\\\\" /Fd"cmTC_0fd58.dir\\Debug\\vc143.pdb" /external:W1 /TP /analyze- /errorReport:queue "D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-yzxtyc\\src.cxx"
           src.cxx
-        D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4y5pkb\\src.cxx(1,16): error C2065: 鈥淿_deprecated__鈥? 鏈０鏄庣殑鏍囪瘑绗?[D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4y5pkb\\cmTC_ce690.vcxproj]
-        D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4y5pkb\\src.cxx(1,1): error C4430: 缂哄皯绫诲瀷璇存槑绗?- 鍋囧畾涓?int銆傛敞鎰? C++ 涓嶆敮鎸侀粯璁?int [D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4y5pkb\\cmTC_ce690.vcxproj]
-        D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4y5pkb\\src.cxx(1,33): error C2062: 鎰忓鐨勭被鍨嬧€渋nt鈥? [D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4y5pkb\\cmTC_ce690.vcxproj]
-        D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4y5pkb\\src.cxx(1,48): error C2143: 璇硶閿欒: 缂哄皯鈥?鈥?鍦ㄢ€渰鈥濈殑鍓嶉潰) [D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4y5pkb\\cmTC_ce690.vcxproj]
-        D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4y5pkb\\src.cxx(1,48): error C2447: 鈥渰鈥? 缂哄皯鍑芥暟鏍囬(鏄惁鏄€佸紡鐨勫舰寮忚〃?) [D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4y5pkb\\cmTC_ce690.vcxproj]
-        D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4y5pkb\\src.cxx(2,25): error C3861: 鈥渟omefunc鈥? 鎵句笉鍒版爣璇嗙 [D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4y5pkb\\cmTC_ce690.vcxproj]
-        宸插畬鎴愮敓鎴愰」鐩€淒:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4y5pkb\\cmTC_ce690.vcxproj鈥?榛樿鐩爣)鐨勬搷浣?- 澶辫触銆?
+        D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-yzxtyc\\src.cxx(1,16): error C2065: 鈥淿_deprecated__鈥? 鏈０鏄庣殑鏍囪瘑绗?[D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-yzxtyc\\cmTC_0fd58.vcxproj]
+        D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-yzxtyc\\src.cxx(1,1): error C4430: 缂哄皯绫诲瀷璇存槑绗?- 鍋囧畾涓?int銆傛敞鎰? C++ 涓嶆敮鎸侀粯璁?int [D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-yzxtyc\\cmTC_0fd58.vcxproj]
+        D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-yzxtyc\\src.cxx(1,33): error C2062: 鎰忓鐨勭被鍨嬧€渋nt鈥? [D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-yzxtyc\\cmTC_0fd58.vcxproj]
+        D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-yzxtyc\\src.cxx(1,48): error C2143: 璇硶閿欒: 缂哄皯鈥?鈥?鍦ㄢ€渰鈥濈殑鍓嶉潰) [D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-yzxtyc\\cmTC_0fd58.vcxproj]
+        D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-yzxtyc\\src.cxx(1,48): error C2447: 鈥渰鈥? 缂哄皯鍑芥暟鏍囬(鏄惁鏄€佸紡鐨勫舰寮忚〃?) [D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-yzxtyc\\cmTC_0fd58.vcxproj]
+        D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-yzxtyc\\src.cxx(2,25): error C3861: 鈥渟omefunc鈥? 鎵句笉鍒版爣璇嗙 [D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-yzxtyc\\cmTC_0fd58.vcxproj]
+        宸插畬鎴愮敓鎴愰」鐩€淒:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-yzxtyc\\cmTC_0fd58.vcxproj鈥?榛樿鐩爣)鐨勬搷浣?- 澶辫触銆?
         
         鐢熸垚澶辫触銆?
         
-        鈥淒:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4y5pkb\\cmTC_ce690.vcxproj鈥?榛樿鐩爣) (1) ->
+        鈥淒:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-yzxtyc\\cmTC_0fd58.vcxproj鈥?榛樿鐩爣) (1) ->
         (ClCompile 鐩爣) -> 
-          D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4y5pkb\\src.cxx(1,16): error C2065: 鈥淿_deprecated__鈥? 鏈０鏄庣殑鏍囪瘑绗?[D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4y5pkb\\cmTC_ce690.vcxproj]
-          D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4y5pkb\\src.cxx(1,1): error C4430: 缂哄皯绫诲瀷璇存槑绗?- 鍋囧畾涓?int銆傛敞鎰? C++ 涓嶆敮鎸侀粯璁?int [D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4y5pkb\\cmTC_ce690.vcxproj]
-          D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4y5pkb\\src.cxx(1,33): error C2062: 鎰忓鐨勭被鍨嬧€渋nt鈥? [D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4y5pkb\\cmTC_ce690.vcxproj]
-          D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4y5pkb\\src.cxx(1,48): error C2143: 璇硶閿欒: 缂哄皯鈥?鈥?鍦ㄢ€渰鈥濈殑鍓嶉潰) [D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4y5pkb\\cmTC_ce690.vcxproj]
-          D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4y5pkb\\src.cxx(1,48): error C2447: 鈥渰鈥? 缂哄皯鍑芥暟鏍囬(鏄惁鏄€佸紡鐨勫舰寮忚〃?) [D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4y5pkb\\cmTC_ce690.vcxproj]
-          D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4y5pkb\\src.cxx(2,25): error C3861: 鈥渟omefunc鈥? 鎵句笉鍒版爣璇嗙 [D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4y5pkb\\cmTC_ce690.vcxproj]
+          D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-yzxtyc\\src.cxx(1,16): error C2065: 鈥淿_deprecated__鈥? 鏈０鏄庣殑鏍囪瘑绗?[D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-yzxtyc\\cmTC_0fd58.vcxproj]
+          D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-yzxtyc\\src.cxx(1,1): error C4430: 缂哄皯绫诲瀷璇存槑绗?- 鍋囧畾涓?int銆傛敞鎰? C++ 涓嶆敮鎸侀粯璁?int [D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-yzxtyc\\cmTC_0fd58.vcxproj]
+          D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-yzxtyc\\src.cxx(1,33): error C2062: 鎰忓鐨勭被鍨嬧€渋nt鈥? [D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-yzxtyc\\cmTC_0fd58.vcxproj]
+          D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-yzxtyc\\src.cxx(1,48): error C2143: 璇硶閿欒: 缂哄皯鈥?鈥?鍦ㄢ€渰鈥濈殑鍓嶉潰) [D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-yzxtyc\\cmTC_0fd58.vcxproj]
+          D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-yzxtyc\\src.cxx(1,48): error C2447: 鈥渰鈥? 缂哄皯鍑芥暟鏍囬(鏄惁鏄€佸紡鐨勫舰寮忚〃?) [D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-yzxtyc\\cmTC_0fd58.vcxproj]
+          D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-yzxtyc\\src.cxx(2,25): error C3861: 鈥渟omefunc鈥? 鎵句笉鍒版爣璇嗙 [D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-yzxtyc\\cmTC_0fd58.vcxproj]
         
             0 涓鍛?
             6 涓敊璇?
         
-        宸茬敤鏃堕棿 00:00:00.47
+        宸茬敤鏃堕棿 00:00:00.44
         
       exitCode: 1
   -
@@ -1950,56 +1673,56 @@ events:
     checks:
       - "Performing Test COMPILER_HAS_DEPRECATED"
     directories:
-      source: "D:/WebService_Project/Common_CPP/Utils/build/CMakeFiles/CMakeScratch/TryCompile-bbx2dz"
-      binary: "D:/WebService_Project/Common_CPP/Utils/build/CMakeFiles/CMakeScratch/TryCompile-bbx2dz"
+      source: "D:/WebService_Project/Common_CPP/Utils/build/CMakeFiles/CMakeScratch/TryCompile-o7xz1a"
+      binary: "D:/WebService_Project/Common_CPP/Utils/build/CMakeFiles/CMakeScratch/TryCompile-o7xz1a"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /GR /EHsc"
       CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
       CMAKE_CXX_STDLIB_MODULES_JSON: ""
-      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:X86"
     buildResult:
       variable: "COMPILER_HAS_DEPRECATED"
       cached: true
       stdout: |
-        Change Dir: 'D:/WebService_Project/Common_CPP/Utils/build/CMakeFiles/CMakeScratch/TryCompile-bbx2dz'
+        Change Dir: 'D:/WebService_Project/Common_CPP/Utils/build/CMakeFiles/CMakeScratch/TryCompile-o7xz1a'
         
-        Run Build Command(s): D:/app/MCVS/2026/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_876df.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=18.0 /v:n
-        閫傜敤浜?.NET Framework MSBuild 鐗堟湰 18.4.0+6e61e96ac
-        鐢熸垚鍚姩鏃堕棿涓?2026/10/1 19:01:52銆?
+        Run Build Command(s): D:/app/VisualStudio/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_38809.vcxproj /p:Configuration=Debug /p:Platform=Win32 /p:VisualStudioVersion=17.0 /v:n
+        閫傜敤浜?.NET Framework MSBuild 鐗堟湰 17.14.40+3e7442088
+        鐢熸垚鍚姩鏃堕棿涓?2026/10/1 19:38:45銆?
         
-        鑺傜偣 1 涓婄殑椤圭洰鈥淒:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-bbx2dz\\cmTC_876df.vcxproj鈥?榛樿鐩爣)銆?
+        鑺傜偣 1 涓婄殑椤圭洰鈥淒:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-o7xz1a\\cmTC_38809.vcxproj鈥?榛樿鐩爣)銆?
         PrepareForBuild:
           宸插惎鐢ㄧ粨鏋勫寲杈撳嚭銆傜紪璇戝櫒璇婃柇鐨勬牸寮忚缃皢鍙嶆槧閿欒灞傛缁撴瀯銆傛湁鍏宠缁嗕俊鎭紝璇峰弬闃?https://aka.ms/cpp/structured-output銆?
-          姝ｅ湪鍒涘缓鐩綍鈥淒:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-bbx2dz\\Debug\\鈥濄€?
-          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_876df.dir\\Debug\\cmTC_876df.tlog\\鈥濄€?
+          姝ｅ湪鍒涘缓鐩綍鈥淒:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-o7xz1a\\Debug\\鈥濄€?
+          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_38809.dir\\Debug\\cmTC_38809.tlog\\鈥濄€?
         InitializeBuildStatus:
-          姝ｅ湪鍒涘缓鈥渃mTC_876df.dir\\Debug\\cmTC_876df.tlog\\unsuccessfulbuild鈥濓紝鍥犱负宸叉寚瀹氣€淎lwaysCreate鈥濄€?
-          姝ｅ湪瀵光€渃mTC_876df.dir\\Debug\\cmTC_876df.tlog\\unsuccessfulbuild鈥濇墽琛?Touch 浠诲姟銆?
+          姝ｅ湪鍒涘缓鈥渃mTC_38809.dir\\Debug\\cmTC_38809.tlog\\unsuccessfulbuild鈥濓紝鍥犱负宸叉寚瀹氣€淎lwaysCreate鈥濄€?
+          姝ｅ湪瀵光€渃mTC_38809.dir\\Debug\\cmTC_38809.tlog\\unsuccessfulbuild鈥濇墽琛?Touch 浠诲姟銆?
         VcpkgTripletSelection:
-          Using triplet "x64-windows" from "D:\\vcpkg\\installed\\x64-windows\\"
+          Using triplet "x86-windows" from "D:\\vcpkg\\installed\\x86-windows\\"
           Using normalized configuration "Debug"
         ClCompile:
-          D:\\app\\MCVS\\2026\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\CL.exe /c /I"D:\\vcpkg\\installed\\x64-windows\\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D COMPILER_HAS_DEPRECATED /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /std:c++17 /Fo"cmTC_876df.dir\\Debug\\\\" /Fd"cmTC_876df.dir\\Debug\\vc145.pdb" /external:W1 /TP /errorReport:queue "D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-bbx2dz\\src.cxx"
-          鐢ㄤ簬 x64 鐨?Microsoft (R) C/C++ 浼樺寲缂栬瘧鍣?19.50.35725 鐗?
+          D:\\app\\VisualStudio\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x86\\CL.exe /c /I"D:\\vcpkg\\installed\\x86-windows\\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D COMPILER_HAS_DEPRECATED /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /std:c++17 /Fo"cmTC_38809.dir\\Debug\\\\" /Fd"cmTC_38809.dir\\Debug\\vc143.pdb" /external:W1 /TP /analyze- /errorReport:queue "D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-o7xz1a\\src.cxx"
+          鐢ㄤ簬 x86 鐨?Microsoft (R) C/C++ 浼樺寲缂栬瘧鍣?19.44.35223 鐗?
           鐗堟潈鎵€鏈?C) Microsoft Corporation銆備繚鐣欐墍鏈夋潈鍒┿€?
-          cl /c /I"D:\\vcpkg\\installed\\x64-windows\\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D COMPILER_HAS_DEPRECATED /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /std:c++17 /Fo"cmTC_876df.dir\\Debug\\\\" /Fd"cmTC_876df.dir\\Debug\\vc145.pdb" /external:W1 /TP /errorReport:queue "D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-bbx2dz\\src.cxx"
+          cl /c /I"D:\\vcpkg\\installed\\x86-windows\\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D COMPILER_HAS_DEPRECATED /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /std:c++17 /Fo"cmTC_38809.dir\\Debug\\\\" /Fd"cmTC_38809.dir\\Debug\\vc143.pdb" /external:W1 /TP /analyze- /errorReport:queue "D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-o7xz1a\\src.cxx"
           src.cxx
         Link:
-          D:\\app\\MCVS\\2026\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\link.exe /OUT:"D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-bbx2dz\\Debug\\cmTC_876df.exe" /INCREMENTAL /ILK:"cmTC_876df.dir\\Debug\\cmTC_876df.ilk" /NOLOGO /LIBPATH:"D:\\vcpkg\\installed\\x64-windows\\debug\\lib" /LIBPATH:"D:\\vcpkg\\installed\\x64-windows\\debug\\lib\\manual-link" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib "D:\\vcpkg\\installed\\x64-windows\\debug\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/WebService_Project/Common_CPP/Utils/build/CMakeFiles/CMakeScratch/TryCompile-bbx2dz/Debug/cmTC_876df.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"D:/WebService_Project/Common_CPP/Utils/build/CMakeFiles/CMakeScratch/TryCompile-bbx2dz/Debug/cmTC_876df.lib" /MACHINE:X64  /machine:x64 cmTC_876df.dir\\Debug\\src.obj
-          cmTC_876df.vcxproj -> D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-bbx2dz\\Debug\\cmTC_876df.exe
+          D:\\app\\VisualStudio\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x86\\link.exe /OUT:"D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-o7xz1a\\Debug\\cmTC_38809.exe" /INCREMENTAL /ILK:"cmTC_38809.dir\\Debug\\cmTC_38809.ilk" /NOLOGO /LIBPATH:"D:\\vcpkg\\installed\\x86-windows\\debug\\lib" /LIBPATH:"D:\\vcpkg\\installed\\x86-windows\\debug\\lib\\manual-link" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib "D:\\vcpkg\\installed\\x86-windows\\debug\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/WebService_Project/Common_CPP/Utils/build/CMakeFiles/CMakeScratch/TryCompile-o7xz1a/Debug/cmTC_38809.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"D:/WebService_Project/Common_CPP/Utils/build/CMakeFiles/CMakeScratch/TryCompile-o7xz1a/Debug/cmTC_38809.lib" /MACHINE:X86  /machine:X86 cmTC_38809.dir\\Debug\\src.obj
+          cmTC_38809.vcxproj -> D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-o7xz1a\\Debug\\cmTC_38809.exe
         AppLocalFromInstalled:
-          "D:\\vcpkg\\vcpkg.exe" z-applocal --target-binary="D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-bbx2dz\\Debug\\cmTC_876df.exe" --installed-bin-dir="D:\\vcpkg\\installed\\x64-windows\\debug\\bin" --tlog-file="cmTC_876df.dir\\Debug\\cmTC_876df.tlog\\cmTC_876df.write.1u.tlog" --copied-files-log="cmTC_876df.dir\\Debug\\vcpkg.applocal.log"
-          D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-bbx2dz\\Debug\\cmTC_876df.exe: message: deploying dependencies
+          "D:\\vcpkg\\vcpkg.exe" z-applocal --target-binary="D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-o7xz1a\\Debug\\cmTC_38809.exe" --installed-bin-dir="D:\\vcpkg\\installed\\x86-windows\\debug\\bin" --tlog-file="cmTC_38809.dir\\Debug\\cmTC_38809.tlog\\cmTC_38809.write.1u.tlog" --copied-files-log="cmTC_38809.dir\\Debug\\vcpkg.applocal.log"
+          D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-o7xz1a\\Debug\\cmTC_38809.exe: message: deploying dependencies
         FinalizeBuildStatus:
-          姝ｅ湪鍒犻櫎鏂囦欢鈥渃mTC_876df.dir\\Debug\\cmTC_876df.tlog\\unsuccessfulbuild鈥濄€?
-          姝ｅ湪瀵光€渃mTC_876df.dir\\Debug\\cmTC_876df.tlog\\cmTC_876df.lastbuildstate鈥濇墽琛?Touch 浠诲姟銆?
-        宸插畬鎴愮敓鎴愰」鐩€淒:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-bbx2dz\\cmTC_876df.vcxproj鈥?榛樿鐩爣)鐨勬搷浣溿€?
+          姝ｅ湪鍒犻櫎鏂囦欢鈥渃mTC_38809.dir\\Debug\\cmTC_38809.tlog\\unsuccessfulbuild鈥濄€?
+          姝ｅ湪瀵光€渃mTC_38809.dir\\Debug\\cmTC_38809.tlog\\cmTC_38809.lastbuildstate鈥濇墽琛?Touch 浠诲姟銆?
+        宸插畬鎴愮敓鎴愰」鐩€淒:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-o7xz1a\\cmTC_38809.vcxproj鈥?榛樿鐩爣)鐨勬搷浣溿€?
         
         宸叉垚鍔熺敓鎴愩€?
             0 涓鍛?
             0 涓敊璇?
         
-        宸茬敤鏃堕棿 00:00:01.03
+        宸茬敤鏃堕棿 00:00:01.55
         
       exitCode: 0
   -
@@ -2013,53 +1736,53 @@ events:
     checks:
       - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
     directories:
-      source: "D:/WebService_Project/Common_CPP/Utils/build/CMakeFiles/CMakeScratch/TryCompile-wtx4gl"
-      binary: "D:/WebService_Project/Common_CPP/Utils/build/CMakeFiles/CMakeScratch/TryCompile-wtx4gl"
+      source: "D:/WebService_Project/Common_CPP/Utils/build/CMakeFiles/CMakeScratch/TryCompile-wyc8xz"
+      binary: "D:/WebService_Project/Common_CPP/Utils/build/CMakeFiles/CMakeScratch/TryCompile-wyc8xz"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /GR /EHsc"
       CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
       CMAKE_CXX_STDLIB_MODULES_JSON: ""
-      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:X86"
     buildResult:
       variable: "CMAKE_HAVE_LIBC_PTHREAD"
       cached: true
       stdout: |
-        Change Dir: 'D:/WebService_Project/Common_CPP/Utils/build/CMakeFiles/CMakeScratch/TryCompile-wtx4gl'
+        Change Dir: 'D:/WebService_Project/Common_CPP/Utils/build/CMakeFiles/CMakeScratch/TryCompile-wyc8xz'
         
-        Run Build Command(s): D:/app/MCVS/2026/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_75d8c.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=18.0 /v:n
-        閫傜敤浜?.NET Framework MSBuild 鐗堟湰 18.4.0+6e61e96ac
-        鐢熸垚鍚姩鏃堕棿涓?2026/10/1 19:01:53銆?
+        Run Build Command(s): D:/app/VisualStudio/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_d8daa.vcxproj /p:Configuration=Debug /p:Platform=Win32 /p:VisualStudioVersion=17.0 /v:n
+        閫傜敤浜?.NET Framework MSBuild 鐗堟湰 17.14.40+3e7442088
+        鐢熸垚鍚姩鏃堕棿涓?2026/10/1 19:38:46銆?
         
-        鑺傜偣 1 涓婄殑椤圭洰鈥淒:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-wtx4gl\\cmTC_75d8c.vcxproj鈥?榛樿鐩爣)銆?
+        鑺傜偣 1 涓婄殑椤圭洰鈥淒:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-wyc8xz\\cmTC_d8daa.vcxproj鈥?榛樿鐩爣)銆?
         PrepareForBuild:
           宸插惎鐢ㄧ粨鏋勫寲杈撳嚭銆傜紪璇戝櫒璇婃柇鐨勬牸寮忚缃皢鍙嶆槧閿欒灞傛缁撴瀯銆傛湁鍏宠缁嗕俊鎭紝璇峰弬闃?https://aka.ms/cpp/structured-output銆?
-          姝ｅ湪鍒涘缓鐩綍鈥淒:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-wtx4gl\\Debug\\鈥濄€?
-          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_75d8c.dir\\Debug\\cmTC_75d8c.tlog\\鈥濄€?
+          姝ｅ湪鍒涘缓鐩綍鈥淒:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-wyc8xz\\Debug\\鈥濄€?
+          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_d8daa.dir\\Debug\\cmTC_d8daa.tlog\\鈥濄€?
         InitializeBuildStatus:
-          姝ｅ湪鍒涘缓鈥渃mTC_75d8c.dir\\Debug\\cmTC_75d8c.tlog\\unsuccessfulbuild鈥濓紝鍥犱负宸叉寚瀹氣€淎lwaysCreate鈥濄€?
-          姝ｅ湪瀵光€渃mTC_75d8c.dir\\Debug\\cmTC_75d8c.tlog\\unsuccessfulbuild鈥濇墽琛?Touch 浠诲姟銆?
+          姝ｅ湪鍒涘缓鈥渃mTC_d8daa.dir\\Debug\\cmTC_d8daa.tlog\\unsuccessfulbuild鈥濓紝鍥犱负宸叉寚瀹氣€淎lwaysCreate鈥濄€?
+          姝ｅ湪瀵光€渃mTC_d8daa.dir\\Debug\\cmTC_d8daa.tlog\\unsuccessfulbuild鈥濇墽琛?Touch 浠诲姟銆?
         VcpkgTripletSelection:
-          Using triplet "x64-windows" from "D:\\vcpkg\\installed\\x64-windows\\"
+          Using triplet "x86-windows" from "D:\\vcpkg\\installed\\x86-windows\\"
           Using normalized configuration "Debug"
         ClCompile:
-          D:\\app\\MCVS\\2026\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\CL.exe /c /I"D:\\vcpkg\\installed\\x64-windows\\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /std:c++17 /Fo"cmTC_75d8c.dir\\Debug\\\\" /Fd"cmTC_75d8c.dir\\Debug\\vc145.pdb" /external:W1 /TP /errorReport:queue "D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-wtx4gl\\src.cxx"
-          鐢ㄤ簬 x64 鐨?Microsoft (R) C/C++ 浼樺寲缂栬瘧鍣?19.50.35725 鐗?
+          D:\\app\\VisualStudio\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x86\\CL.exe /c /I"D:\\vcpkg\\installed\\x86-windows\\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /std:c++17 /Fo"cmTC_d8daa.dir\\Debug\\\\" /Fd"cmTC_d8daa.dir\\Debug\\vc143.pdb" /external:W1 /TP /analyze- /errorReport:queue "D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-wyc8xz\\src.cxx"
+          鐢ㄤ簬 x86 鐨?Microsoft (R) C/C++ 浼樺寲缂栬瘧鍣?19.44.35223 鐗?
           鐗堟潈鎵€鏈?C) Microsoft Corporation銆備繚鐣欐墍鏈夋潈鍒┿€?
-          cl /c /I"D:\\vcpkg\\installed\\x64-windows\\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /std:c++17 /Fo"cmTC_75d8c.dir\\Debug\\\\" /Fd"cmTC_75d8c.dir\\Debug\\vc145.pdb" /external:W1 /TP /errorReport:queue "D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-wtx4gl\\src.cxx"
+          cl /c /I"D:\\vcpkg\\installed\\x86-windows\\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /std:c++17 /Fo"cmTC_d8daa.dir\\Debug\\\\" /Fd"cmTC_d8daa.dir\\Debug\\vc143.pdb" /external:W1 /TP /analyze- /errorReport:queue "D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-wyc8xz\\src.cxx"
           src.cxx
-        D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-wtx4gl\\src.cxx(1,10): error C1083: 鏃犳硶鎵撳紑鍖呮嫭鏂囦欢: 鈥減thread.h鈥? No such file or directory [D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-wtx4gl\\cmTC_75d8c.vcxproj]
-        宸插畬鎴愮敓鎴愰」鐩€淒:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-wtx4gl\\cmTC_75d8c.vcxproj鈥?榛樿鐩爣)鐨勬搷浣?- 澶辫触銆?
+        D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-wyc8xz\\src.cxx(1,10): error C1083: 鏃犳硶鎵撳紑鍖呮嫭鏂囦欢: 鈥減thread.h鈥? No such file or directory [D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-wyc8xz\\cmTC_d8daa.vcxproj]
+        宸插畬鎴愮敓鎴愰」鐩€淒:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-wyc8xz\\cmTC_d8daa.vcxproj鈥?榛樿鐩爣)鐨勬搷浣?- 澶辫触銆?
         
         鐢熸垚澶辫触銆?
         
-        鈥淒:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-wtx4gl\\cmTC_75d8c.vcxproj鈥?榛樿鐩爣) (1) ->
+        鈥淒:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-wyc8xz\\cmTC_d8daa.vcxproj鈥?榛樿鐩爣) (1) ->
         (ClCompile 鐩爣) -> 
-          D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-wtx4gl\\src.cxx(1,10): error C1083: 鏃犳硶鎵撳紑鍖呮嫭鏂囦欢: 鈥減thread.h鈥? No such file or directory [D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-wtx4gl\\cmTC_75d8c.vcxproj]
+          D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-wyc8xz\\src.cxx(1,10): error C1083: 鏃犳硶鎵撳紑鍖呮嫭鏂囦欢: 鈥減thread.h鈥? No such file or directory [D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-wyc8xz\\cmTC_d8daa.vcxproj]
         
             0 涓鍛?
             1 涓敊璇?
         
-        宸茬敤鏃堕棿 00:00:00.46
+        宸茬敤鏃堕棿 00:00:00.45
         
       exitCode: 1
   -
@@ -2072,55 +1795,55 @@ events:
     checks:
       - "Looking for pthread_create in pthreads"
     directories:
-      source: "D:/WebService_Project/Common_CPP/Utils/build/CMakeFiles/CMakeScratch/TryCompile-kpjhiu"
-      binary: "D:/WebService_Project/Common_CPP/Utils/build/CMakeFiles/CMakeScratch/TryCompile-kpjhiu"
+      source: "D:/WebService_Project/Common_CPP/Utils/build/CMakeFiles/CMakeScratch/TryCompile-ll3ovf"
+      binary: "D:/WebService_Project/Common_CPP/Utils/build/CMakeFiles/CMakeScratch/TryCompile-ll3ovf"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /GR /EHsc"
       CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
       CMAKE_CXX_STDLIB_MODULES_JSON: ""
-      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:X86"
     buildResult:
       variable: "CMAKE_HAVE_PTHREADS_CREATE"
       cached: true
       stdout: |
-        Change Dir: 'D:/WebService_Project/Common_CPP/Utils/build/CMakeFiles/CMakeScratch/TryCompile-kpjhiu'
+        Change Dir: 'D:/WebService_Project/Common_CPP/Utils/build/CMakeFiles/CMakeScratch/TryCompile-ll3ovf'
         
-        Run Build Command(s): D:/app/MCVS/2026/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_fdf6f.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=18.0 /v:n
-        閫傜敤浜?.NET Framework MSBuild 鐗堟湰 18.4.0+6e61e96ac
-        鐢熸垚鍚姩鏃堕棿涓?2026/10/1 19:01:54銆?
+        Run Build Command(s): D:/app/VisualStudio/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_38ec6.vcxproj /p:Configuration=Debug /p:Platform=Win32 /p:VisualStudioVersion=17.0 /v:n
+        閫傜敤浜?.NET Framework MSBuild 鐗堟湰 17.14.40+3e7442088
+        鐢熸垚鍚姩鏃堕棿涓?2026/10/1 19:38:47銆?
         
-        鑺傜偣 1 涓婄殑椤圭洰鈥淒:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-kpjhiu\\cmTC_fdf6f.vcxproj鈥?榛樿鐩爣)銆?
+        鑺傜偣 1 涓婄殑椤圭洰鈥淒:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ll3ovf\\cmTC_38ec6.vcxproj鈥?榛樿鐩爣)銆?
         PrepareForBuild:
           宸插惎鐢ㄧ粨鏋勫寲杈撳嚭銆傜紪璇戝櫒璇婃柇鐨勬牸寮忚缃皢鍙嶆槧閿欒灞傛缁撴瀯銆傛湁鍏宠缁嗕俊鎭紝璇峰弬闃?https://aka.ms/cpp/structured-output銆?
-          姝ｅ湪鍒涘缓鐩綍鈥淒:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-kpjhiu\\Debug\\鈥濄€?
-          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_fdf6f.dir\\Debug\\cmTC_fdf6f.tlog\\鈥濄€?
+          姝ｅ湪鍒涘缓鐩綍鈥淒:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ll3ovf\\Debug\\鈥濄€?
+          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_38ec6.dir\\Debug\\cmTC_38ec6.tlog\\鈥濄€?
         InitializeBuildStatus:
-          姝ｅ湪鍒涘缓鈥渃mTC_fdf6f.dir\\Debug\\cmTC_fdf6f.tlog\\unsuccessfulbuild鈥濓紝鍥犱负宸叉寚瀹氣€淎lwaysCreate鈥濄€?
-          姝ｅ湪瀵光€渃mTC_fdf6f.dir\\Debug\\cmTC_fdf6f.tlog\\unsuccessfulbuild鈥濇墽琛?Touch 浠诲姟銆?
+          姝ｅ湪鍒涘缓鈥渃mTC_38ec6.dir\\Debug\\cmTC_38ec6.tlog\\unsuccessfulbuild鈥濓紝鍥犱负宸叉寚瀹氣€淎lwaysCreate鈥濄€?
+          姝ｅ湪瀵光€渃mTC_38ec6.dir\\Debug\\cmTC_38ec6.tlog\\unsuccessfulbuild鈥濇墽琛?Touch 浠诲姟銆?
         VcpkgTripletSelection:
-          Using triplet "x64-windows" from "D:\\vcpkg\\installed\\x64-windows\\"
+          Using triplet "x86-windows" from "D:\\vcpkg\\installed\\x86-windows\\"
           Using normalized configuration "Debug"
         ClCompile:
-          D:\\app\\MCVS\\2026\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\CL.exe /c /I"D:\\vcpkg\\installed\\x64-windows\\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /std:c++17 /Fo"cmTC_fdf6f.dir\\Debug\\\\" /Fd"cmTC_fdf6f.dir\\Debug\\vc145.pdb" /external:W1 /TP /errorReport:queue "D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-kpjhiu\\CheckFunctionExists.cxx"
-          鐢ㄤ簬 x64 鐨?Microsoft (R) C/C++ 浼樺寲缂栬瘧鍣?19.50.35725 鐗?
+          D:\\app\\VisualStudio\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x86\\CL.exe /c /I"D:\\vcpkg\\installed\\x86-windows\\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /std:c++17 /Fo"cmTC_38ec6.dir\\Debug\\\\" /Fd"cmTC_38ec6.dir\\Debug\\vc143.pdb" /external:W1 /TP /analyze- /errorReport:queue "D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ll3ovf\\CheckFunctionExists.cxx"
+          鐢ㄤ簬 x86 鐨?Microsoft (R) C/C++ 浼樺寲缂栬瘧鍣?19.44.35223 鐗?
           鐗堟潈鎵€鏈?C) Microsoft Corporation銆備繚鐣欐墍鏈夋潈鍒┿€?
-          cl /c /I"D:\\vcpkg\\installed\\x64-windows\\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /std:c++17 /Fo"cmTC_fdf6f.dir\\Debug\\\\" /Fd"cmTC_fdf6f.dir\\Debug\\vc145.pdb" /external:W1 /TP /errorReport:queue "D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-kpjhiu\\CheckFunctionExists.cxx"
+          cl /c /I"D:\\vcpkg\\installed\\x86-windows\\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /std:c++17 /Fo"cmTC_38ec6.dir\\Debug\\\\" /Fd"cmTC_38ec6.dir\\Debug\\vc143.pdb" /external:W1 /TP /analyze- /errorReport:queue "D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ll3ovf\\CheckFunctionExists.cxx"
           CheckFunctionExists.cxx
         Link:
-          D:\\app\\MCVS\\2026\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\link.exe /OUT:"D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-kpjhiu\\Debug\\cmTC_fdf6f.exe" /INCREMENTAL /ILK:"cmTC_fdf6f.dir\\Debug\\cmTC_fdf6f.ilk" /NOLOGO /LIBPATH:"D:\\vcpkg\\installed\\x64-windows\\debug\\lib" /LIBPATH:"D:\\vcpkg\\installed\\x64-windows\\debug\\lib\\manual-link" pthreads.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib "D:\\vcpkg\\installed\\x64-windows\\debug\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/WebService_Project/Common_CPP/Utils/build/CMakeFiles/CMakeScratch/TryCompile-kpjhiu/Debug/cmTC_fdf6f.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"D:/WebService_Project/Common_CPP/Utils/build/CMakeFiles/CMakeScratch/TryCompile-kpjhiu/Debug/cmTC_fdf6f.lib" /MACHINE:X64  /machine:x64 cmTC_fdf6f.dir\\Debug\\CheckFunctionExists.obj
-        LINK : fatal error LNK1104: 鏃犳硶鎵撳紑鏂囦欢鈥減threads.lib鈥?[D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-kpjhiu\\cmTC_fdf6f.vcxproj]
-        宸插畬鎴愮敓鎴愰」鐩€淒:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-kpjhiu\\cmTC_fdf6f.vcxproj鈥?榛樿鐩爣)鐨勬搷浣?- 澶辫触銆?
+          D:\\app\\VisualStudio\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x86\\link.exe /OUT:"D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ll3ovf\\Debug\\cmTC_38ec6.exe" /INCREMENTAL /ILK:"cmTC_38ec6.dir\\Debug\\cmTC_38ec6.ilk" /NOLOGO /LIBPATH:"D:\\vcpkg\\installed\\x86-windows\\debug\\lib" /LIBPATH:"D:\\vcpkg\\installed\\x86-windows\\debug\\lib\\manual-link" pthreads.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib "D:\\vcpkg\\installed\\x86-windows\\debug\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/WebService_Project/Common_CPP/Utils/build/CMakeFiles/CMakeScratch/TryCompile-ll3ovf/Debug/cmTC_38ec6.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"D:/WebService_Project/Common_CPP/Utils/build/CMakeFiles/CMakeScratch/TryCompile-ll3ovf/Debug/cmTC_38ec6.lib" /MACHINE:X86  /machine:X86 cmTC_38ec6.dir\\Debug\\CheckFunctionExists.obj
+        LINK : fatal error LNK1104: 鏃犳硶鎵撳紑鏂囦欢鈥減threads.lib鈥?[D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ll3ovf\\cmTC_38ec6.vcxproj]
+        宸插畬鎴愮敓鎴愰」鐩€淒:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ll3ovf\\cmTC_38ec6.vcxproj鈥?榛樿鐩爣)鐨勬搷浣?- 澶辫触銆?
         
         鐢熸垚澶辫触銆?
         
-        鈥淒:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-kpjhiu\\cmTC_fdf6f.vcxproj鈥?榛樿鐩爣) (1) ->
+        鈥淒:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ll3ovf\\cmTC_38ec6.vcxproj鈥?榛樿鐩爣) (1) ->
         (Link 鐩爣) -> 
-          LINK : fatal error LNK1104: 鏃犳硶鎵撳紑鏂囦欢鈥減threads.lib鈥?[D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-kpjhiu\\cmTC_fdf6f.vcxproj]
+          LINK : fatal error LNK1104: 鏃犳硶鎵撳紑鏂囦欢鈥減threads.lib鈥?[D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ll3ovf\\cmTC_38ec6.vcxproj]
         
             0 涓鍛?
             1 涓敊璇?
         
-        宸茬敤鏃堕棿 00:00:00.54
+        宸茬敤鏃堕棿 00:00:00.59
         
       exitCode: 1
   -
@@ -2133,55 +1856,55 @@ events:
     checks:
       - "Looking for pthread_create in pthread"
     directories:
-      source: "D:/WebService_Project/Common_CPP/Utils/build/CMakeFiles/CMakeScratch/TryCompile-nfe51z"
-      binary: "D:/WebService_Project/Common_CPP/Utils/build/CMakeFiles/CMakeScratch/TryCompile-nfe51z"
+      source: "D:/WebService_Project/Common_CPP/Utils/build/CMakeFiles/CMakeScratch/TryCompile-cabkvk"
+      binary: "D:/WebService_Project/Common_CPP/Utils/build/CMakeFiles/CMakeScratch/TryCompile-cabkvk"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /GR /EHsc"
       CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
       CMAKE_CXX_STDLIB_MODULES_JSON: ""
-      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:X86"
     buildResult:
       variable: "CMAKE_HAVE_PTHREAD_CREATE"
       cached: true
       stdout: |
-        Change Dir: 'D:/WebService_Project/Common_CPP/Utils/build/CMakeFiles/CMakeScratch/TryCompile-nfe51z'
+        Change Dir: 'D:/WebService_Project/Common_CPP/Utils/build/CMakeFiles/CMakeScratch/TryCompile-cabkvk'
         
-        Run Build Command(s): D:/app/MCVS/2026/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_e2196.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=18.0 /v:n
-        閫傜敤浜?.NET Framework MSBuild 鐗堟湰 18.4.0+6e61e96ac
-        鐢熸垚鍚姩鏃堕棿涓?2026/10/1 19:01:55銆?
+        Run Build Command(s): D:/app/VisualStudio/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_d982f.vcxproj /p:Configuration=Debug /p:Platform=Win32 /p:VisualStudioVersion=17.0 /v:n
+        閫傜敤浜?.NET Framework MSBuild 鐗堟湰 17.14.40+3e7442088
+        鐢熸垚鍚姩鏃堕棿涓?2026/10/1 19:38:48銆?
         
-        鑺傜偣 1 涓婄殑椤圭洰鈥淒:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-nfe51z\\cmTC_e2196.vcxproj鈥?榛樿鐩爣)銆?
+        鑺傜偣 1 涓婄殑椤圭洰鈥淒:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-cabkvk\\cmTC_d982f.vcxproj鈥?榛樿鐩爣)銆?
         PrepareForBuild:
           宸插惎鐢ㄧ粨鏋勫寲杈撳嚭銆傜紪璇戝櫒璇婃柇鐨勬牸寮忚缃皢鍙嶆槧閿欒灞傛缁撴瀯銆傛湁鍏宠缁嗕俊鎭紝璇峰弬闃?https://aka.ms/cpp/structured-output銆?
-          姝ｅ湪鍒涘缓鐩綍鈥淒:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-nfe51z\\Debug\\鈥濄€?
-          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_e2196.dir\\Debug\\cmTC_e2196.tlog\\鈥濄€?
+          姝ｅ湪鍒涘缓鐩綍鈥淒:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-cabkvk\\Debug\\鈥濄€?
+          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_d982f.dir\\Debug\\cmTC_d982f.tlog\\鈥濄€?
         InitializeBuildStatus:
-          姝ｅ湪鍒涘缓鈥渃mTC_e2196.dir\\Debug\\cmTC_e2196.tlog\\unsuccessfulbuild鈥濓紝鍥犱负宸叉寚瀹氣€淎lwaysCreate鈥濄€?
-          姝ｅ湪瀵光€渃mTC_e2196.dir\\Debug\\cmTC_e2196.tlog\\unsuccessfulbuild鈥濇墽琛?Touch 浠诲姟銆?
+          姝ｅ湪鍒涘缓鈥渃mTC_d982f.dir\\Debug\\cmTC_d982f.tlog\\unsuccessfulbuild鈥濓紝鍥犱负宸叉寚瀹氣€淎lwaysCreate鈥濄€?
+          姝ｅ湪瀵光€渃mTC_d982f.dir\\Debug\\cmTC_d982f.tlog\\unsuccessfulbuild鈥濇墽琛?Touch 浠诲姟銆?
         VcpkgTripletSelection:
-          Using triplet "x64-windows" from "D:\\vcpkg\\installed\\x64-windows\\"
+          Using triplet "x86-windows" from "D:\\vcpkg\\installed\\x86-windows\\"
           Using normalized configuration "Debug"
         ClCompile:
-          D:\\app\\MCVS\\2026\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\CL.exe /c /I"D:\\vcpkg\\installed\\x64-windows\\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /std:c++17 /Fo"cmTC_e2196.dir\\Debug\\\\" /Fd"cmTC_e2196.dir\\Debug\\vc145.pdb" /external:W1 /TP /errorReport:queue "D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-nfe51z\\CheckFunctionExists.cxx"
-          鐢ㄤ簬 x64 鐨?Microsoft (R) C/C++ 浼樺寲缂栬瘧鍣?19.50.35725 鐗?
+          D:\\app\\VisualStudio\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x86\\CL.exe /c /I"D:\\vcpkg\\installed\\x86-windows\\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /std:c++17 /Fo"cmTC_d982f.dir\\Debug\\\\" /Fd"cmTC_d982f.dir\\Debug\\vc143.pdb" /external:W1 /TP /analyze- /errorReport:queue "D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-cabkvk\\CheckFunctionExists.cxx"
+          鐢ㄤ簬 x86 鐨?Microsoft (R) C/C++ 浼樺寲缂栬瘧鍣?19.44.35223 鐗?
           鐗堟潈鎵€鏈?C) Microsoft Corporation銆備繚鐣欐墍鏈夋潈鍒┿€?
-          cl /c /I"D:\\vcpkg\\installed\\x64-windows\\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /std:c++17 /Fo"cmTC_e2196.dir\\Debug\\\\" /Fd"cmTC_e2196.dir\\Debug\\vc145.pdb" /external:W1 /TP /errorReport:queue "D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-nfe51z\\CheckFunctionExists.cxx"
+          cl /c /I"D:\\vcpkg\\installed\\x86-windows\\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /std:c++17 /Fo"cmTC_d982f.dir\\Debug\\\\" /Fd"cmTC_d982f.dir\\Debug\\vc143.pdb" /external:W1 /TP /analyze- /errorReport:queue "D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-cabkvk\\CheckFunctionExists.cxx"
           CheckFunctionExists.cxx
         Link:
-          D:\\app\\MCVS\\2026\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\link.exe /OUT:"D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-nfe51z\\Debug\\cmTC_e2196.exe" /INCREMENTAL /ILK:"cmTC_e2196.dir\\Debug\\cmTC_e2196.ilk" /NOLOGO /LIBPATH:"D:\\vcpkg\\installed\\x64-windows\\debug\\lib" /LIBPATH:"D:\\vcpkg\\installed\\x64-windows\\debug\\lib\\manual-link" pthread.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib "D:\\vcpkg\\installed\\x64-windows\\debug\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/WebService_Project/Common_CPP/Utils/build/CMakeFiles/CMakeScratch/TryCompile-nfe51z/Debug/cmTC_e2196.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"D:/WebService_Project/Common_CPP/Utils/build/CMakeFiles/CMakeScratch/TryCompile-nfe51z/Debug/cmTC_e2196.lib" /MACHINE:X64  /machine:x64 cmTC_e2196.dir\\Debug\\CheckFunctionExists.obj
-        LINK : fatal error LNK1104: 鏃犳硶鎵撳紑鏂囦欢鈥減thread.lib鈥?[D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-nfe51z\\cmTC_e2196.vcxproj]
-        宸插畬鎴愮敓鎴愰」鐩€淒:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-nfe51z\\cmTC_e2196.vcxproj鈥?榛樿鐩爣)鐨勬搷浣?- 澶辫触銆?
+          D:\\app\\VisualStudio\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x86\\link.exe /OUT:"D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-cabkvk\\Debug\\cmTC_d982f.exe" /INCREMENTAL /ILK:"cmTC_d982f.dir\\Debug\\cmTC_d982f.ilk" /NOLOGO /LIBPATH:"D:\\vcpkg\\installed\\x86-windows\\debug\\lib" /LIBPATH:"D:\\vcpkg\\installed\\x86-windows\\debug\\lib\\manual-link" pthread.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib "D:\\vcpkg\\installed\\x86-windows\\debug\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/WebService_Project/Common_CPP/Utils/build/CMakeFiles/CMakeScratch/TryCompile-cabkvk/Debug/cmTC_d982f.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"D:/WebService_Project/Common_CPP/Utils/build/CMakeFiles/CMakeScratch/TryCompile-cabkvk/Debug/cmTC_d982f.lib" /MACHINE:X86  /machine:X86 cmTC_d982f.dir\\Debug\\CheckFunctionExists.obj
+        LINK : fatal error LNK1104: 鏃犳硶鎵撳紑鏂囦欢鈥減thread.lib鈥?[D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-cabkvk\\cmTC_d982f.vcxproj]
+        宸插畬鎴愮敓鎴愰」鐩€淒:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-cabkvk\\cmTC_d982f.vcxproj鈥?榛樿鐩爣)鐨勬搷浣?- 澶辫触銆?
         
         鐢熸垚澶辫触銆?
         
-        鈥淒:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-nfe51z\\cmTC_e2196.vcxproj鈥?榛樿鐩爣) (1) ->
+        鈥淒:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-cabkvk\\cmTC_d982f.vcxproj鈥?榛樿鐩爣) (1) ->
         (Link 鐩爣) -> 
-          LINK : fatal error LNK1104: 鏃犳硶鎵撳紑鏂囦欢鈥減thread.lib鈥?[D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-nfe51z\\cmTC_e2196.vcxproj]
+          LINK : fatal error LNK1104: 鏃犳硶鎵撳紑鏂囦欢鈥減thread.lib鈥?[D:\\WebService_Project\\Common_CPP\\Utils\\build\\CMakeFiles\\CMakeScratch\\TryCompile-cabkvk\\cmTC_d982f.vcxproj]
         
             0 涓鍛?
             1 涓敊璇?
         
-        宸茬敤鏃堕棿 00:00:00.53
+        宸茬敤鏃堕棿 00:00:00.55
         
       exitCode: 1
 ...

@@ -140,10 +140,16 @@ install(FILES ${CMAKE_CURRENT_BINARY_DIR}/include/UtilsExport.h # 生成的导�
     DESTINATION ${CMAKE_INSTALL_INCLUDEDIR} # 安装到包含目录
 )
 
+# 构建时把公开头文件复制到库产物同级的 include 目录，便于免安装直接使用构建树
+set(UTILS_HEADER_OUTPUT_DIR ${CMAKE_CURRENT_BINARY_DIR}/include) # 头文件输出目录（与库产物同级）
+add_custom_command(TARGET Utils POST_BUILD # 库构建完成后执行，实现“构建的同时”复制
+    COMMAND ${CMAKE_COMMAND} -E make_directory ${UTILS_HEADER_OUTPUT_DIR} # 目录不存在则先创建
+    COMMAND ${CMAKE_COMMAND} -E copy_directory ${CMAKE_CURRENT_SOURCE_DIR}/include ${UTILS_HEADER_OUTPUT_DIR} # 复制源码树里的全部公开头（含子目录）
+    COMMAND ${CMAKE_COMMAND} -E copy_if_different ${CMAKE_CURRENT_BINARY_DIR}/include/UtilsExport.h ${UTILS_HEADER_OUTPUT_DIR}/UtilsExport.h # 复制生成的导出宏头
+    COMMENT "复制公开头文件到 ${UTILS_HEADER_OUTPUT_DIR}" # 构建日志提示
+)
+
 # 导出目标：生成 MyLibTargets.cmake，其中定义导入目标 MyLib::MyLib
-
-
-
 
 install(EXPORT UtilsTargets # 导出前面的安装目标集合
     FILE UtilsTargets.cmake # 生成的目标描述文件名
