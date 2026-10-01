@@ -84,6 +84,53 @@ add_subdirectory(path/to/Utils)
 target_link_libraries(your_app PRIVATE Utils::Utils)
 ```
 
+## 直接使用头文件 + 库文件
+
+不使用 CMake 时，手动把「公开头文件 + 生成的导出宏头 + 库文件」组合起来即可。
+
+### 需要的文件
+
+| 类别       | 来源                                                                                  |
+| ---------- | ------------------------------------------------------------------------------------- |
+| 公开头文件 | `include/Message.h`、`include/Utils.h`                                                |
+| 导出宏头   | 构建目录 `build/include/UtilsExport.h`（或安装后的 `out/include/UtilsExport.h`）      |
+| 库文件     | 静态库 `Utils.lib` / `libUtils.a`，或动态库 `Utils.dll` + `Utils.lib` / `libUtils.so` |
+
+> 注意：`UtilsExport.h` 由 `generate_export_header` 生成，不在源码树里，必须从构建/安装目录取。
+> 头文件里 `#include "UtilsExport.h"`，因此二者要在同一包含目录中。
+
+### 推荐目录摆放
+
+```
+myapp/
+├─ include/
+│  ├─ Message.h
+│  ├─ Utils.h
+│  └─ UtilsExport.h        # 从 build/include 或 out/include 拷来
+├─ lib/
+│  └─ Utils.lib            # 静态库；动态库再加 Utils.dll
+└─ src/
+   └─ main.cpp
+```
+
+### MSVC 命令行示例（静态库）
+
+```bat
+cl /std:c++17 /EHsc /I include src\main.cpp /link lib\Utils.lib
+```
+
+### GCC / Clang 命令行示例（静态库）
+
+```shell
+g++ -std=c++17 -I include src/main.cpp -L lib -lUtils -pthread -o myapp
+```
+
+### 动态库注意事项
+
+- **Windows**：程序运行时需能找到 `Utils.dll`，把它放到 exe 同目录或加入 `PATH`。
+- **Linux**：运行时需能找到 `libUtils.so`，可通过 `-Wl,-rpath` 指定路径，或设置 `LD_LIBRARY_PATH`。
+- 动态库使用方**不要**定义 `Utils_STATIC_DEFINE`；链接静态库时才需要该宏（CMake 会自动处理，手动引用时按静态库默认即可）。
+
 ## 模块速览
 
 | 模块     | 命名空间        | 说明                              |
