@@ -10,6 +10,8 @@
 #include <functional>
 
 #include "Message.h"
+
+#include <string>
 #include <atomic>
 
 #ifdef _WIN32
@@ -22,8 +24,8 @@ namespace Utils
 {
     /// @brief      当前服务器ID
     /// @details    存储本服务进程的全局唯一ID
-    /// @note
-    extern int serviceID;
+    /// @note       使用原子属性
+    extern std::atomic<ServiceID> serviceID;
 
     /// @namespace  Time
     /// @brief      时间工具子模块
