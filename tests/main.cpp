@@ -5,6 +5,10 @@
 /// @return 返回程序的执行码
 int main()
 {
+
+    Utils::serviceID.store(ServiceID::);
+
+
     std::cout << "===================" << std::endl;
     std::cout << "This test of Utils" << std::endl;
     std::cout << "===================" << std::endl;
