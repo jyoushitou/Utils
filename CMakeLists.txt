@@ -187,9 +187,8 @@ install(FILES # 安装上面生成的两个配置文件
 # （把本工程的构建目录加进 CMAKE_PREFIX_PATH 即可，常用于同仓库多工程联调）
 # export(EXPORT MyLibTargets FILE ${CMAKE_CURRENT_BINARY_DIR}/MyLibTargets.cmake NAMESPACE MyLib::)
 
-# 注意：当前仓库未提供 tests/ 与 examples/ 目录，默认关闭；创建目录后可改为 ${LIB_IS_TOP_LEVEL} 开启
-option(Utils_BUILD_TESTS "构建 Utils 单元测试" OFF)
-option(Utils_BUILD_EXAMPLES "构建 Utils 示例程序" OFF)
+option(Utils_BUILD_TESTS "构建 Utils 单元测试" ${LIB_IS_TOP_LEVEL})
+option(Utils_BUILD_EXAMPLES "构建 Utils 示例程序" OFF) # 仓库暂无 examples/ 目录，关闭
 
 if(Utils_BUILD_TESTS)
     enable_testing() # 在顶层目录调用才会生成 CTest 元数据

@@ -1,3 +1,3 @@
 #include "Utils.h"
 
-namespace 
+namespace Utils{}
