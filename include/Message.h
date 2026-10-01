@@ -13,7 +13,7 @@
 /// @note       显式赋值，禁止依赖默认递增
 enum ServiceID : int
 {
-    Invalid = 0,         ///< 无效/未指定
+    Test = 0,         ///< 无效/未指定
     RPCGateway = 1,      ///< RPC网关服务：请求转发与路由
     SQL = 2,             ///< SQL数据库服务：数据持久化
     Registry = 3,        ///< 注册中心服务：服务发现与注册
@@ -42,7 +42,7 @@ constexpr std::string_view ServiceName(ServiceID id) noexcept
 {
     switch (id)
     {
-    case Invalid:
+    case Test:
         return {};
     case RPCGateway:
         return "RPCGateway";
