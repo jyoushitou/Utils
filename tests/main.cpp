@@ -6,7 +6,7 @@
 int main()
 {
 
-    Utils::serviceID.store(ServiceID::);
+    Utils::serviceID.store(ServiceID::Test);
 
 
     std::cout << "===================" << std::endl;

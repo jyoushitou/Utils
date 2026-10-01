@@ -43,7 +43,7 @@ constexpr std::string_view ServiceName(ServiceID id) noexcept
     switch (id)
     {
     case Test:
-        return {};
+        return "Test";
     case RPCGateway:
         return "RPCGateway";
     case SQL:
