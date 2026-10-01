@@ -49,12 +49,12 @@ cmake --build build --config Release
 
 主要产物（Windows + VS 生成器）：
 
-| 产物 | 路径 |
-|------|------|
-| 静态库 | `build/Release/Utils.lib` |
-| 动态库 | `build/Release/Utils.dll` + `Utils.lib` |
-| 测试程序 | `build/tests/Release/UtilsTests.exe` |
-| 生成的导出宏头 | `build/include/UtilsExport.h` |
+| 产物           | 路径                                    |
+| -------------- | --------------------------------------- |
+| 静态库         | `build/Release/Utils.lib`               |
+| 动态库         | `build/Release/Utils.dll` + `Utils.lib` |
+| 测试程序       | `build/tests/Release/UtilsTests.exe`    |
+| 生成的导出宏头 | `build/include/UtilsExport.h`           |
 
 ## 测试
 
@@ -86,14 +86,14 @@ target_link_libraries(your_app PRIVATE Utils::Utils)
 
 ## 模块速览
 
-| 模块 | 命名空间 | 说明 |
-|------|----------|------|
-| 服务标识 | `ServiceID` | 服务全局唯一 ID 及名称转换 |
-| 时间 | `Utils::Time` | 时间戳、时间差、格式化时间 / 日期 |
-| 退出 | `Utils::Exit` | 优雅退出、停止回调、退出等待 |
-| 文件 | `Utils::File` | 文件读写、日志目录与日志写入 |
-| 输出 | `Utils::Out` | 控制台 / 错误 / 网络输出 |
-| 字符串 | `Utils::String` | 字符串分词等工具 |
+| 模块     | 命名空间        | 说明                              |
+| -------- | --------------- | --------------------------------- |
+| 服务标识 | `ServiceID`     | 服务全局唯一 ID 及名称转换        |
+| 时间     | `Utils::Time`   | 时间戳、时间差、格式化时间 / 日期 |
+| 退出     | `Utils::Exit`   | 优雅退出、停止回调、退出等待      |
+| 文件     | `Utils::File`   | 文件读写、日志目录与日志写入      |
+| 输出     | `Utils::Out`    | 控制台 / 错误 / 网络输出          |
+| 字符串   | `Utils::String` | 字符串分词等工具                  |
 
 ## 许可证
 
