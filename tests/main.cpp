@@ -51,6 +51,32 @@ void testFile()
     std::cout << "===================" << std::endl;
 }
 
+void testOut()
+{
+    std::cout << "===================" << std::endl;
+    std::cout << "This test of out in Utils" << std::endl;
+    std::cout << "===================" << std::endl;
+
+    std::cout << "you can test out msg! enter you test msg" << std::endl;
+    std::string msg;
+    std::cin >> msg;
+    Utils::Out::outMsg(msg);
+
+    std::cout << "you can test out error msg! enter you test msg" << std::endl;
+    std::string msg1;
+    std::cin >> msg1;
+    Utils::Out::outErr(msg1);
+
+    std::cout << "you can test out net msg! enter you test msg" << std::endl;
+    std::string msg2;
+    std::cin >> msg2;
+    Utils::Out::outNetMsg(1,msg2);
+
+    std::cout << "===================" << std::endl;
+    std::cout << "out in Utils over" << std::endl;
+    std::cout << "===================" << std::endl;
+}
+
 /// @brief 程序的启动函数
 /// @return 返回程序的执行码
 int main()
@@ -66,6 +92,7 @@ int main()
         std::cout << "0.close Test" << std::endl;
         std::cout << "1.Test time" << std::endl;
         std::cout << "2.Test File" << std::endl;
+        std::cout << "3.Test Out" << std::endl;
         int key = 0;
         std::cin >> key;
         switch (key)
@@ -82,6 +109,12 @@ int main()
         case 2:
         {
             testFile();
+            break;
+        }
+        case 3:
+        {
+            testOut();
+            break;
         }
         }
     }

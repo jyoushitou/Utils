@@ -379,8 +379,10 @@ namespace Utils
         /// @note
         void outMsg(const std::string msg)
         {
-            // std::string Out_Str = std::format("[{}][INFO]{} {}", ServiceID(serviceID.load()), Time::getNowtime(),
-            // msg); std::cout << Out_Str << std::endl; File::outLog(Out_Str);
+            std::string Out_Str = std::string("[") + ServiceName(serviceID.load()).data() + std::string("][INFO]") +
+                                  Time::getNowtime() + std::string(" ") + msg;
+            std::cout << Out_Str << std::endl;
+            File::outLog(Out_Str);
         }
 
         /// @brief      输出错误信息
