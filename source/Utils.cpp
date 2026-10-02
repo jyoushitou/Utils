@@ -311,7 +311,7 @@ namespace Utils
         /// @brief 检查是否有对应的目录
         /// @param[in] dir 检查的目录
         /// @return
-        bool createDir(std::string dir)
+        void createDir(std::string dir)
         {
             std::filesystem::create_directories(dir);
         }
@@ -320,7 +320,7 @@ namespace Utils
         /// @details    检查是否有logs文件夹，没有则创建
         /// @return     目录可用返回 true，否则返回 false
         /// @note
-        static bool createLogDir()
+        static void createLogDir()
         {
             createDir(logsdir);
         }

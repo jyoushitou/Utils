@@ -31,7 +31,7 @@ void testFile()
     std::cout << "This test of file in Utils" << std::endl;
     std::cout << "===================" << std::endl;
 
-    check
+    Utils::File::outFileAdd("TEST.txt", "测试");
 
     std::cout << "===================" << std::endl;
     std::cout << "file in Utils over" << std::endl;
@@ -42,9 +42,10 @@ void testFile()
 /// @return 返回程序的执行码
 int main()
 {
-
+    Utils::init();
     std::cout << "===================" << std::endl;
     std::cout << "This test of Utils" << std::endl;
+    std::cout << "Init is over" << std::endl;
     std::cout << "===================" << std::endl;
     std::cout << "Go to you test?" << std::endl;
     while (1)
