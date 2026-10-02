@@ -18,6 +18,8 @@ void testTime()
 
     std::cout << std::endl << "Now day is " << Utils::Time::getNowDay() << std::endl << std::endl;
 
+    std::cout << std::endl << "last time is " << Utils::Time::computeTime(nowTime) << std::endl << std::endl;
+
     std::cout << "===================" << std::endl;
     std::cout << "time in Utils over" << std::endl;
     std::cout << "===================" << std::endl;
