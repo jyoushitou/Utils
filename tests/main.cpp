@@ -70,10 +70,29 @@ void testOut()
     std::cout << "you can test out net msg! enter you test msg" << std::endl;
     std::string msg2;
     std::cin >> msg2;
-    Utils::Out::outNetMsg(1,msg2);
+    Utils::Out::outNetMsg(1, msg2);
 
     std::cout << "===================" << std::endl;
     std::cout << "out in Utils over" << std::endl;
+    std::cout << "===================" << std::endl;
+}
+
+void testExit()
+{
+    std::cout << "===================" << std::endl;
+    std::cout << "This test of exit in Utils" << std::endl;
+    std::cout << "===================" << std::endl;
+
+    Utils::Exit::registerStopCallback([]() { Utils::Out::outMsg("收到退出信号，开始清理资源..."); });
+
+    // 主线程在此阻塞，直到收到系统退出信号或外部调用 recviceExit()
+    Utils::Exit::waitExit();
+
+    // 退出流程（waitExit 返回后触发，或手动调用）
+    Utils::Exit::gracefulShutdown();
+
+    std::cout << "===================" << std::endl;
+    std::cout << "exit in Utils over" << std::endl;
     std::cout << "===================" << std::endl;
 }
 
@@ -93,6 +112,7 @@ int main()
         std::cout << "1.Test time" << std::endl;
         std::cout << "2.Test File" << std::endl;
         std::cout << "3.Test Out" << std::endl;
+        std::cout << "4.Test Exit" << std::endl;
         int key = 0;
         std::cin >> key;
         switch (key)
@@ -115,6 +135,15 @@ int main()
         {
             testOut();
             break;
+        }
+        case 4:
+        {
+            testExit();
+            break;
+        }
+        default:
+        {
+            continue;
         }
         }
     }

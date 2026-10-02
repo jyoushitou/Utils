@@ -172,6 +172,46 @@ namespace Utils
     /// @note
     namespace Exit
     {
+
+        /// @brief      退出标志
+        /// @details    标识是否已触发退出
+        /// @note
+        inline std::atomic<bool> exit_flag(false);
+        /// @brief      防止多次调用
+        /// @details    保证退出流程仅执行一次
+        /// @note
+        inline std::atomic<bool> exit_called(false);
+        /// @brief      运行标志
+        /// @details    标识服务当前是否正在运行
+        /// @note
+        inline std::atomic<bool> running(true);
+#ifdef _WIN32
+        /// @brief      退出事件
+        /// @details    统一退出事件：主线程 waitExit() 阻塞等待
+        /// @note
+        inline HANDLE exit_event = nullptr;
+
+        /// @brief      Windows 控制台关闭事件处理
+        /// @details    响应控制台关闭等系统事件
+        /// @param[in] ctrlType 控制台事件类型
+        /// @return    处理成功返回 TRUE
+        /// @note
+        BOOL WINAPI ConsoleCtrlHandler(DWORD ctrlType);
+#else
+        /// @brief      退出互斥锁
+        /// @details    保护退出条件变量
+        /// @note
+        inline std::mutex exit_mutex;
+        /// @brief      退出条件变量
+        /// @details    用于唤醒等待退出的线程
+        /// @note
+        inline std::condition_variable exit_cv;
+        /// @brief      退出信号标志
+        /// @details    标识是否已发出退出信号
+        /// @note
+        inline bool exit_signaled = false;
+#endif
+
         /// @brief      停止回调列表
         /// @details    保存所有已注册的停止回调
         /// @note
@@ -197,6 +237,7 @@ namespace Utils
         /// @note
         void gracefulShutdown()
         {
+
             bool expected = false;
 
             if (exit_called.compare_exchange_strong(expected, true))
@@ -260,7 +301,7 @@ namespace Utils
 
         /// @brief      信号处理函数
         /// @details    按键/信号触发时的处理逻辑
-        /// @param[in] sig 信号编号（当前未使用）
+        /// @param[in] sig 信号编号
         /// @note
         void onsignal(int sig)
         {

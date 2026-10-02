@@ -102,7 +102,7 @@ int main()
     Utils::init();
 
     // 2) 设置本进程的服务ID（全局唯一，供日志/寻址使用）
-    Utils::serviceID = ServiceID_User;
+    Utils::serviceID = User;
 
     // 3) 统一输出（信息 / 错误 / 网络）
     Utils::Out::outMsg("服务启动");
@@ -138,6 +138,8 @@ int main()
 ```
 
 > 编译时请确保 `UtilsExport.h` 与 `Message.h`、`Utils.h` 在同一包含目录（构建后位于 `build/include/`）。
+
+- 完整示例可以参考tests/main.cpp文件
 
 ## 直接使用头文件 + 库文件
 
