@@ -167,7 +167,7 @@ namespace Utils
         /// @details    检查是否有logs文件夹，没有则创建
         /// @return     目录可用返回 true，否则返回 false
         /// @note
-        bool checkLogsDir();
+        bool checkDir(std::string dir);
 
         /// @brief      追加写入文件
         /// @details    以追加方式向指定文件写入内容

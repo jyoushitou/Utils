@@ -307,21 +307,29 @@ namespace Utils
             logsdir = dir;
         }
 
+        /// @brief 检查是否有对应的目录
+        /// @param[in] dir 检查的目录
+        /// @return
+        bool checkDir(std::string dir)
+        {
+#ifdef _WIN32 // windows端
+            if (_mkdir(dir.c_str()) == 0)
+                return true;
+            return errno == EEXIST;
+#else // Linux端
+            if (mkdir(dir.c_str(), 0755) == 0)
+                return true;
+            return errno == EEXIST;
+#endif
+        }
+
         /// @brief      检查日志目录
         /// @details    检查是否有logs文件夹，没有则创建
         /// @return     目录可用返回 true，否则返回 false
         /// @note
-        bool checkLogsDir()
+        bool checkLogDir()
         {
-#ifdef _WIN32
-            if (_mkdir(logsdir.c_str()) == 0)
-                return true;
-            return errno == EEXIST;
-#else
-            if (mkdir(logsdir.c_str(), 0755) == 0)
-                return true;
-            return errno == EEXIST;
-#endif
+            checkDir(logsdir);
         }
 
         /// @brief      追加写入文件
@@ -351,7 +359,7 @@ namespace Utils
         void outLog(const std::string msg)
         {
             // 确认是否有这个文件夹
-            if (!checkLogsDir())
+            if (!checkLogDir())
             {
                 std::cerr << "创建logs失败" << std::endl;
             }
