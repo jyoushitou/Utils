@@ -31,7 +31,7 @@ void testFile()
     std::cout << "This test of file in Utils" << std::endl;
     std::cout << "===================" << std::endl;
 
-    
+    check
 
     std::cout << "===================" << std::endl;
     std::cout << "file in Utils over" << std::endl;
