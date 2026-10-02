@@ -33,8 +33,9 @@ namespace Utils
     /// @note
     namespace Time
     {
-        /// @brief 获得当前时间()
+        /// @brief 获得当前时间
         /// @details 获得当前时间
+        /// @warning 获得的是time_t
         time_t nowTime();
 
         /// @brief 计算时间差
@@ -46,7 +47,7 @@ namespace Utils
         /// @brief      获取当前时间
         /// @details    返回当前时刻的格式化字符串
         /// @return     格式化后的时间字符串
-        /// @note
+        /// @warning    获得的是字符串格式
         std::string getNowtime();
 
         /// @brief      获取当前日期

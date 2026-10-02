@@ -160,7 +160,7 @@ namespace Utils
             // 1~31
             int day = local.tm_mday;
 
-            return std::to_string(year) + "-" + std::to_string(month) + "-" + std::to_string(day) + "-logs";
+            return std::to_string(year) + "-" + std::to_string(month) + "-" + std::to_string(day);
         }
 
     } // namespace Time
@@ -355,7 +355,7 @@ namespace Utils
             {
                 std::cerr << "创建logs失败" << std::endl;
             }
-            std::string addr = logsdir + "/" + Time::getNowDay() + ".txt";
+            std::string addr = logsdir + "/" + Time::getNowDay() + "-logs.txt";
             if (File::outFileAdd(addr, msg))
                 std::cerr << "写入日志失败" << std::endl;
         }
@@ -374,9 +374,8 @@ namespace Utils
         /// @note
         void outMsg(const std::string msg)
         {
-            //std::string Out_Str = std::format("[{}][INFO]{} {}", ServiceID(serviceID.load()), Time::getNowtime(), msg);
-            //std::cout << Out_Str << std::endl;
-            //File::outLog(Out_Str);
+            // std::string Out_Str = std::format("[{}][INFO]{} {}", ServiceID(serviceID.load()), Time::getNowtime(),
+            // msg); std::cout << Out_Str << std::endl; File::outLog(Out_Str);
         }
 
         /// @brief      输出错误信息
@@ -385,9 +384,8 @@ namespace Utils
         /// @note
         void outErr(const std::string msg)
         {
-            //std::string Out_Str = std::format("[{}][ERROR]{} {}", ServiceID(serviceID.load()), Time::getNowtime(), msg);
-            //std::cerr << Out_Str << std::endl;
-            //File::outLog(Out_Str);
+            // std::string Out_Str = std::format("[{}][ERROR]{} {}", ServiceID(serviceID.load()), Time::getNowtime(),
+            // msg); std::cerr << Out_Str << std::endl; File::outLog(Out_Str);
         }
 
         /// @brief      网络输出
@@ -420,7 +418,6 @@ namespace Utils
         {
             return std::vector<std::string>{};
         }
-
 
     } // namespace String
 } // namespace Utils

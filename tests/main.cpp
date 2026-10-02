@@ -10,11 +10,13 @@ void testTime()
     std::cout << "This test of time in Utils" << std::endl;
     std::cout << "===================" << std::endl;
 
-    std::cout <<std::endl<< "now time is " << Utils::Time::nowTime() << std::endl<<std::endl;
+    std::cout << std::endl << "Now time is " << Utils::Time::nowTime() << std::endl << std::endl;
 
     time_t nowTime = Utils::Time::nowTime();
 
-    //std::cout<<
+    std::cout << std::endl << "Now time is " << Utils::Time::getNowtime() << std::endl << std::endl;
+
+    std::cout << std::endl << "Now day is " << Utils::Time::getNowDay() << std::endl << std::endl;
 
     std::cout << "===================" << std::endl;
     std::cout << "time in Utils over" << std::endl;
