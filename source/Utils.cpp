@@ -279,7 +279,7 @@ namespace Utils
         /// @details    按键/信号触发时的处理逻辑
         /// @param[in] sig 信号编号
         /// @note
-        void onsignal(int sig)
+        void onsignal()
         {
             gracefulShutdown();
         }
@@ -432,8 +432,10 @@ namespace Utils
         /// @note
         void outErr(const std::string msg)
         {
-            // std::string Out_Str = std::format("[{}][ERROR]{} {}", ServiceID(serviceID.load()), Time::getNowtime(),
-            // msg); std::cerr << Out_Str << std::endl; File::outLog(Out_Str);
+            std::string Out_Str = std::string("[") + ServiceName(serviceID.load()).data() + std::string("][ERROR]") +
+                                  Time::getNowtime() + std::string(" ") + msg;
+            std::cerr << Out_Str << std::endl;
+            File::outLog(Out_Str);
         }
 
         /// @brief      网络输出
@@ -464,6 +466,10 @@ namespace Utils
         /// @note
         std::vector<std::string> split(const std::string& str, const int& post, const char& c)
         {
+            // 尚未实现：显式忽略参数，避免 C4100 未引用参数警告
+            (void)str;
+            (void)post;
+            (void)c;
             return std::vector<std::string>{};
         }
 

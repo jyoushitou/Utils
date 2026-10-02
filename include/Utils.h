@@ -80,7 +80,7 @@ namespace Utils
         /// @details    按键/信号触发时的处理逻辑
         /// @param[in] sig 信号编号
         /// @note
-        void onsignal(int sig);
+        void onsignal();
 
         /// @brief      清理资源
         /// @details    释放退出过程中占用的资源
@@ -184,7 +184,7 @@ namespace Utils
         /// @return     切分后的字符串集合
         /// @warning    分隔符参数默认值存在书写问题，使用前请确认
         /// @note
-        std::vector<std::string> split(const std::string& str = "", const int& post = 0, const char& c = '|s');
+        std::vector<std::string> split(const std::string& str = "", const int& post = 0, const char& c = '|');
     } // namespace String
 
     /// @brief      初始化
