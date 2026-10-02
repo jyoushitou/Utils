@@ -85,7 +85,7 @@ target_include_directories(Utils # 设置目标 Utils 的头文件搜索路径
     $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}> # 安装后头文件目录（相对安装前缀）
 )
 
-target_compile_features(Utils PUBLIC cxx_std_20) # 对外声明需 C++17；PUBLIC 会传导给使用方
+target_compile_features(Utils PUBLIC cxx_std_17) # 对外声明需 C++17；PUBLIC 会传导给使用方
 
 # 多个选项必须整体加引号，否则分号会被当成列表分隔符而拆坏生成器表达式
 target_compile_options(Utils PRIVATE # 编译选项，仅作用于本目标

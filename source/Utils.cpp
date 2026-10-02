@@ -18,7 +18,6 @@
 #include <mutex>
 #include <condition_variable>
 #include <vector>
-#include <format>
 
 #include <ctime>
 #include <thread>
@@ -375,9 +374,9 @@ namespace Utils
         /// @note
         void outMsg(const std::string msg)
         {
-            std::string Out_Str = std::format("[{}][INFO]{} {}", ServiceID(serviceID.load()), Time::getNowtime(), msg);
-            std::cout << Out_Str << std::endl;
-            File::outLog(Out_Str);
+            //std::string Out_Str = std::format("[{}][INFO]{} {}", ServiceID(serviceID.load()), Time::getNowtime(), msg);
+            //std::cout << Out_Str << std::endl;
+            //File::outLog(Out_Str);
         }
 
         /// @brief      输出错误信息
@@ -386,9 +385,9 @@ namespace Utils
         /// @note
         void outErr(const std::string msg)
         {
-            std::string Out_Str = std::format("[{}][ERROR]{} {}", ServiceID(serviceID.load()), Time::getNowtime(), msg);
-            std::cerr << Out_Str << std::endl;
-            File::outLog(Out_Str);
+            //std::string Out_Str = std::format("[{}][ERROR]{} {}", ServiceID(serviceID.load()), Time::getNowtime(), msg);
+            //std::cerr << Out_Str << std::endl;
+            //File::outLog(Out_Str);
         }
 
         /// @brief      网络输出
@@ -421,5 +420,7 @@ namespace Utils
         {
             return std::vector<std::string>{};
         }
+
+
     } // namespace String
 } // namespace Utils

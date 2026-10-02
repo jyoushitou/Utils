@@ -33,7 +33,7 @@ namespace Utils
     /// @note
     namespace Time
     {
-        /// @brief 获得当前时间
+        /// @brief 获得当前时间()
         /// @details 获得当前时间
         time_t nowTime();
 
