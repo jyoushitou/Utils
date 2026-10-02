@@ -96,6 +96,30 @@ void testExit()
     std::cout << "===================" << std::endl;
 }
 
+void testString()
+{
+    std::cout << "===================" << std::endl;
+    std::cout << "This test of exit in Utils" << std::endl;
+    std::cout << "===================" << std::endl;
+
+    std::cout << "you can test split string!you enter you wang to split string"<<std::endl;
+    std::string str;
+    std::getline(std::cin,str);
+
+    auto vec = Utils::String::split(str, 0, '|');
+
+    std::cout << "you splited string :" << std::endl;
+
+    for (auto i : vec)
+    {
+        std::cout<<i<<std::endl;
+    }
+
+    std::cout << "===================" << std::endl;
+    std::cout << "exit in Utils over" << std::endl;
+    std::cout << "===================" << std::endl;
+}
+
 /// @brief 程序的启动函数
 /// @return 返回程序的执行码
 int main()
@@ -113,6 +137,7 @@ int main()
         std::cout << "2.Test File" << std::endl;
         std::cout << "3.Test Out" << std::endl;
         std::cout << "4.Test Exit" << std::endl;
+        std::cout << "5.Test string" << std::endl;
         int key = 0;
         std::cin >> key;
         switch (key)
@@ -139,6 +164,10 @@ int main()
         case 4:
         {
             testExit();
+            break;
+        }
+        case 5:{
+            testString();
             break;
         }
         default:

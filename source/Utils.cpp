@@ -466,11 +466,28 @@ namespace Utils
         /// @note
         std::vector<std::string> split(const std::string& str, const int& post, const char& c)
         {
-            // 尚未实现：显式忽略参数，避免 C4100 未引用参数警告
-            (void)str;
-            (void)post;
-            (void)c;
-            return std::vector<std::string>{};
+            std::vector<std::string> returnVector;
+            std::string temp;
+
+            // post 作为起始位置：负数按 0 处理，避免 signed/unsigned 混用
+            const std::size_t start = (post > 0) ? static_cast<std::size_t>(post) : 0;
+
+            for (std::size_t i = start; i < str.size(); ++i)
+            {
+                if (str[i] == c)
+                {
+                    returnVector.push_back(temp);
+                    temp.clear();
+                }
+                else
+                {
+                    temp += str[i];
+                }
+            }
+
+            // 收尾：最后一个分隔符之后的词也要加入
+            returnVector.push_back(temp);
+            return returnVector;
         }
 
     } // namespace String
