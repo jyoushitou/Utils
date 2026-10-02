@@ -41,30 +41,6 @@ namespace Utils
     /// @note       在 .cpp 中定义，头文件仅作 extern 声明
     extern std::atomic<ServiceID> serviceID;
 
-    /// @brief      初始化
-    /// @details    初始化控制台，并注册退出相关的回调
-    /// @warning    应在程序启动早期调用
-    /// @note
-    void init()
-    {
-#ifdef _WIN32
-
-        // 检验退出事件是否已创建，未创建时手动重置
-        if (!Exit::exit_event)
-            // 手动重置
-            Exit::exit_event = CreateEvent(nullptr, TRUE, FALSE, nullptr);
-        // 设置控制台的编码格式
-        SetConsoleOutputCP(CP_UTF8);
-        SetConsoleCtrlHandler(Exit::ConsoleCtrlHandler, TRUE);
-#else
-        // Linux/macOS：注册信号处理器，Ctrl+C 或 kill 时触发优雅退出
-        std::signal(SIGINT, Exit::onsignal);
-        std::signal(SIGTERM, Exit::onsignal);
-        // 可选：忽略 SIGPIPE 防止写入已关闭 socket 导致进程崩溃
-        std::signal(SIGPIPE, SIG_IGN);
-#endif
-    }
-
     /// @namespace  Time
     /// @brief      时间工具子模块
     /// @details    提供当前时间与日期的格式化获取
@@ -332,6 +308,30 @@ namespace Utils
         }
 #endif
     } // namespace Exit
+
+    /// @brief      初始化
+    /// @details    初始化控制台，并注册退出相关的回调
+    /// @warning    应在程序启动早期调用
+    /// @note
+    void init()
+    {
+#ifdef _WIN32
+
+        // 检验退出事件是否已创建，未创建时手动重置
+        if (!Exit::exit_event)
+            // 手动重置
+            Exit::exit_event = CreateEvent(nullptr, TRUE, FALSE, nullptr);
+        // 设置控制台的编码格式
+        SetConsoleOutputCP(CP_UTF8);
+        SetConsoleCtrlHandler(Exit::ConsoleCtrlHandler, TRUE);
+#else
+        // Linux/macOS：注册信号处理器，Ctrl+C 或 kill 时触发优雅退出
+        std::signal(SIGINT, Exit::onsignal);
+        std::signal(SIGTERM, Exit::onsignal);
+        // 可选：忽略 SIGPIPE 防止写入已关闭 socket 导致进程崩溃
+        std::signal(SIGPIPE, SIG_IGN);
+#endif
+    }
 
     /// @namespace  File
     /// @brief      文件子模块

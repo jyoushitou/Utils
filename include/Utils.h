@@ -58,12 +58,6 @@ namespace Utils
 
     } // namespace Time
 
-    /// @brief      初始化
-    /// @details    初始化控制台，并注册退出相关的回调
-    /// @warning    应在程序启动早期调用
-    /// @note
-    void init();
-
     /// @namespace  Exit
     /// @brief      退出子模块
     /// @details    统一管理程序的优雅退出流程
@@ -193,4 +187,9 @@ namespace Utils
         std::vector<std::string> split(const std::string& str = "", const int& post = 0, const char& c = '|s');
     } // namespace String
 
+    /// @brief      初始化
+    /// @details    初始化控制台，并注册退出相关的回调
+    /// @warning    应在程序启动早期调用
+    /// @note
+    void init();
 } // namespace Utils
