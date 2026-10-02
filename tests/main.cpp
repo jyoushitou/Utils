@@ -31,7 +31,20 @@ void testFile()
     std::cout << "This test of file in Utils" << std::endl;
     std::cout << "===================" << std::endl;
 
+    std::cout << "you can the dir ,in dir have TEST.txt" << std::endl;
     Utils::File::outFileAdd("TEST.txt", "测试");
+
+    std::cout << "you can test create dir! enter you go to dir" << std::endl;
+    std::string dir;
+    std::cin >> dir;
+    Utils::File::createDir(dir);
+
+    std::cout << "you can test create log! enter you write log" << std::endl;
+
+    std::string logs;
+    std::cin >> logs;
+
+    Utils::File::outLog(logs);
 
     std::cout << "===================" << std::endl;
     std::cout << "file in Utils over" << std::endl;
@@ -52,6 +65,7 @@ int main()
     {
         std::cout << "0.close Test" << std::endl;
         std::cout << "1.Test time" << std::endl;
+        std::cout << "2.Test File" << std::endl;
         int key = 0;
         std::cin >> key;
         switch (key)
@@ -67,6 +81,7 @@ int main()
         }
         case 2:
         {
+            testFile();
         }
         }
     }

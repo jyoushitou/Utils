@@ -352,9 +352,13 @@ namespace Utils
         void outLog(const std::string msg)
         {
             // 确认是否有这个文件夹
-            if (!createLogDir())
+            try
             {
-                std::cerr << "创建logs失败" << std::endl;
+                createLogDir();
+            }
+            catch (std::error_code ec)
+            {
+                std::cerr << "创建logs失败,error_code is" << ec.value() << std::endl;
             }
             std::string addr = logsdir + "/" + Time::getNowDay() + "-logs.txt";
             if (File::outFileAdd(addr, msg))
