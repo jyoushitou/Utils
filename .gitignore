@@ -2,4 +2,6 @@ build/
 
 .vscode/
 
+Release/
+
 CMakeLists.template.txt
