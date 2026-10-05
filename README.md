@@ -25,6 +25,12 @@ Utils/
 ├─ tests/                      # 单元测试（CTest）
 │  ├─ CMakeLists.txt
 │  └─ main.cpp
+├─ ports/                      # vcpkg 端口（上位工程 find_package 用）
+│  └─ utils/
+│     ├─ vcpkg.json            # 端口清单：包名 utils、版本、依赖
+│     ├─ portfile.cmake        # 构建脚本：本地开发用工作区源码，发布用 GitHub 标签
+│     ├─ usage                 # 安装后打印的使用说明
+│     └─ LICENSE               # 随包安装的许可证
 └─ cmake/
    └─ UtilsConfig.cmake.in     # 包配置模板，供 find_package 使用
 ```
@@ -47,6 +53,50 @@ cmake -S . -B build -DBUILD_SHARED_LIBS=ON
 # 编译（VS 等多配置生成器需指定 --config）
 cmake --build build --config Release
 ```
+
+### 构建 64 位（x64）版本
+
+目标平台架构由 **CMake 生成器与工具链** 决定，`CMakeLists.txt` 本身无需改动，配置阶段选对平台即可。
+
+**Visual Studio 生成器（默认 Win32，必须显式指定 x64）**
+
+```powershell
+cmake -S . -B build-x64 -G "Visual Studio 17 2022" -A x64
+cmake --build build-x64 --config Release
+```
+
+- `-G` 请按本机安装的 VS 版本替换（如 `Visual Studio 16 2019`）；不写 `-A x64` 默认生成 Win32(x86)。
+- 动态库再追加 `-DBUILD_SHARED_LIBS=ON`。
+- 切换架构请使用**新的构建目录**（如 `build-x64`），不要复用旧的 `build`，否则会因生成器 / 平台不匹配报错。
+
+**Ninja 生成器（需在 x64 开发者环境执行）**
+
+```powershell
+# 在 “x64 Native Tools Command Prompt for VS” 中执行
+cmake -S . -B build-x64 -G Ninja -DCMAKE_BUILD_TYPE=Release
+cmake --build build-x64
+```
+
+确保进入的是 `vcvars64.bat`（x64）而非 `vcvars32.bat`（x86）。
+
+**MinGW-w64**
+
+```powershell
+cmake -S . -B build-x64 -G "MinGW Makefiles" `
+  -DCMAKE_C_COMPILER=x86_64-w64-mingw32-gcc `
+  -DCMAKE_CXX_COMPILER=x86_64-w64-mingw32-g++ `
+  -DCMAKE_BUILD_TYPE=Release
+cmake --build build-x64
+```
+
+**验证产物位数**
+
+```powershell
+dumpbin /headers build-x64\Release\Utils.lib | findstr machine
+# 显示 machine (x64) 即为 64 位；(x86) 则是 32 位
+```
+
+> 多配置生成器（VS）务必带 `--config`（如 `--config Release`），否则默认走 Debug，产物位于 `build-x64\Debug\`。
 
 主要产物（Windows + VS 生成器）：
 
@@ -87,6 +137,151 @@ target_link_libraries(your_app PRIVATE Utils::Utils)
 add_subdirectory(path/to/Utils)
 target_link_libraries(your_app PRIVATE Utils::Utils)
 ```
+
+## 通过 vcpkg 使用（推荐给上位工程）
+
+本仓库内置了 vcpkg 端口（`ports/utils/`），装好之后**上位工程不需要再关心头文件路径和
+`.lib` 路径，只写包名即可**：
+
+```cmake
+find_package(Utils CONFIG REQUIRED)
+target_link_libraries(your_app PRIVATE Utils::Utils)
+```
+
+端口会按三元组自动选择链接方式，并自动带出 `Threads::Threads`、C++17 要求以及静态库所需
+的 `Utils_STATIC_DEFINE` 宏——这正是它比「手动把 `Utils.lib` 拖进工程」更省事的地方，
+Debug / Release 也不会再出现 ABI 混用。
+
+### 1. 安装本包
+
+```powershell
+# 开发方式（端口就在源码仓库里）：直接拿当前工作区当源码，改完重装即生效，免 push 免联网
+& $env:VCPKG_ROOT\vcpkg.exe install utils `
+    --overlay-ports=D:\WebService_Project\Common_CPP\Utils\ports `
+    --triplet x64-windows
+
+# 正式方式：端口被单独发布成注册表后，从 GitHub 的 v1.0.0 标签构建
+# （需先打好 v1.0.0 标签，并把下载到的 SHA512 填进 portfile.cmake）
+& $env:VCPKG_ROOT\vcpkg.exe install utils --triplet x64-windows
+```
+
+- `--triplet x64-windows` 得到动态库，`--triplet x64-windows-static` 得到静态库。
+- `ports/utils/portfile.cmake` 会自动判断：端口位于源码仓库内就用工作区源码，否则从
+  GitHub 标签下载并校验 SHA512。
+- 首次联网构建若报 SHA512 不匹配，vcpkg 会直接打印真实哈希值，复制进 portfile 即可。
+
+### 2. 上位工程引用
+
+上位工程用 `--overlay-ports`（或写进 `vcpkg-configuration.json`）指向本仓库的 `ports`
+目录，然后在自己的 `CMakeLists.txt` 里 `find_package(Utils CONFIG REQUIRED)` 即可。
+
+在 `CMakeLists.txt` 顶部指定 vcpkg 工具链（已有则忽略）：
+
+```cmake
+if(NOT DEFINED CMAKE_TOOLCHAIN_FILE AND DEFINED ENV{VCPKG_ROOT})
+    set(CMAKE_TOOLCHAIN_FILE "$ENV{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake"
+        CACHE STRING "vcpkg toolchain")
+endif()
+```
+
+配置时把三元组与 overlay 端口一起传进去：
+
+```powershell
+cmake -S . -B build -G "Visual Studio 17 2022" -A x64 `
+  -DCMAKE_TOOLCHAIN_FILE="$env:VCPKG_ROOT/scripts/buildsystems/vcpkg.cmake" `
+  -DVCPKG_OVERLAY_PORTS="D:/WebService_Project/Common_CPP/Utils/ports" `
+  -DVCPKG_TARGET_TRIPLET=x64-windows
+```
+
+> 用 `x64-windows-static`（静态 CRT）时，上位工程需同时声明 `CMAKE_MSVC_RUNTIME_LIBRARY`
+> 为 `MultiThreaded$<$<CONFIG:Debug>:Debug>`，否则会出现 `RuntimeLibrary` 不匹配的链接错误；
+> 用默认的 `x64-windows`（动态 CRT）则无需任何额外设置。
+
+### 3. 怎么在 vcpkg 里“找”这个包
+
+`utils` 不在 [vcpkg 官方端口库](https://github.com/microsoft/vcpkg/tree/master/ports) 里，
+所以 `vcpkg search utils` 找不到它——它是**本仓库自带的端口（overlay port）**。查找方式是
+带上 `--overlay-ports` 让 vcpkg 去看本仓库：
+
+```powershell
+# 在官方端口库 + 本仓库端口里搜索（加 --overlay-ports 才会出现 utils）
+& $env:VCPKG_ROOT\vcpkg.exe search utils --overlay-ports=D:\WebService_Project\Common_CPP\Utils\ports
+
+# 看本机装了哪些版本（x64-windows / x64-windows-static 各一行）
+& $env:VCPKG_ROOT\vcpkg.exe list utils
+
+# 看完整描述（list 默认截断长文本）
+& $env:VCPKG_ROOT\vcpkg.exe list utils --x-full-desc
+
+# 机器可读的 JSON 输出（版本号、ABI、状态一目了然）
+& $env:VCPKG_ROOT\vcpkg.exe list utils --x-json
+```
+
+“找”的完整链条是：**ports 目录（端口位置）→ 端口名 `utils`（安装写这个）→
+`find_package(Utils)`（CMake 写这个）**。上位工程只要记住后两个。
+
+### 4. 日常更新：改了 Utils 代码后怎么让 vcpkg 里的包也更新
+
+> 核心要点：vcpkg 判断“要不要重建”只看 **版本号 + ABI 哈希**，而 overlay 端口的源码是
+> 你本地工作区，**改代码不会改变这两者**——所以直接重装、加 `--recurse`、加
+> `--no-binarycaching` 单独用都不行，vcpkg 会认为“已安装/缓存里有”，直接跳过。
+
+正确的更新三步（实测有效）：
+
+```powershell
+# 1) 先在源码仓库里构建，确认改动本身没问题
+cmake --build build\build-x64 --config Release
+ctest --test-dir build\build-x64 -C Release --output-on-failure
+
+# 2) 卸载旧包（关键一步：让 vcpkg 忘掉“已安装”这个状态）
+& $env:VCPKG_ROOT\vcpkg.exe remove utils --triplet x64-windows
+
+# 3) 重新安装（必须带 --no-binarycaching，否则会从二进制缓存里恢复旧包）
+& $env:VCPKG_ROOT\vcpkg.exe install utils --no-binarycaching `
+    --overlay-ports=D:\WebService_Project\Common_CPP\Utils\ports --triplet x64-windows
+```
+
+第 3 步若省略 `--no-binarycaching`，日志会显示 `Restored 1 package(s) from ...archives`，
+装回去的是**旧代码**——这是最容易踩的坑。静态库版本同理，把三元组换成
+`x64-windows-static` 再走一遍 2、3 步。
+
+**怎么确认真的更新了**：库里 `Utils::init()` 会打印版本号，上位工程运行时第一行就是它；
+也可以在包里搜字符串确认：
+
+```powershell
+Select-String -Path "$env:VCPKG_ROOT\installed\x64-windows\bin\Utils.dll" -Pattern 'Utils version' -Encoding ascii
+```
+
+上位工程侧只需重新构建即可，CMake 不用重新配置（头文件与库路径没变）：
+
+```powershell
+cmake --build build --config Release
+```
+
+**改了版本号时**（比如发布 1.1.0）：同步改 `ports/utils/vcpkg.json` 的 `version`，并在
+仓库打上 `v1.1.0` 标签，其它机器的 vcpkg 才会去拉新源码；只改 `port-version`
+（`1.0.0#1` 的 `#1`）表示“上游源码没变、只是端口脚本改了”，不会重新下载源码。
+
+### 5. 包名与用法速查
+
+| 项目         | 值                                                           |
+| ------------ | ------------------------------------------------------------ |
+| 端口名       | `utils`                                                      |
+| CMake 查找名 | `find_package(Utils CONFIG REQUIRED)`                        |
+| 链接目标     | `Utils::Utils`                                               |
+| 头文件       | `#include "Utils.h"`（自动带出 `Message.h`、`UtilsExport.h`） |
+| 端口位置     | `ports/utils/`                                               |
+| 依赖         | 仅 `Threads`（系统线程库），无第三方依赖                     |
+| 更新命令     | `remove` 后 `install --no-binarycaching`（见上一节）         |
+
+### 6. 为支持发包所做的改动（需要改动源码时请注意）
+
+| 改动                                       | 原因                                                                                         |
+| ------------------------------------------ | -------------------------------------------------------------------------------------------- |
+| 公开头文件与含中文的源文件改为 **UTF-8 带 BOM** | 头文件含中文注释且无 BOM 时，MSVC 在 GBK 代码页下会解析错乱，甚至吞掉 `#include`，使用方一编译就报错 |
+| 公开接口补上 `Utils_API` 导出宏（含 `Utils::serviceID`） | `CXX_VISIBILITY_PRESET hidden` + generate_export_header 的语义要求显式导出，否则动态库链接失败 |
+| `DEBUG_POSTFIX` 置空，Debug / Release 产物同名 | vcpkg 按「同名」打包两种配置，加 `d` 后缀会导致包校验失败；两者由各自目录区分，不会混淆     |
+| `init()` 打印库版本号（`UTILS_VERSION` 宏）  | 一眼确认上位工程链接到的到底是哪一版，排查“包没更新”时非常有用                             |
 
 ## 快速开始（示例）
 

@@ -96,11 +96,13 @@ target_compile_options(Utils PRIVATE # 编译选项，仅作用于本目标
 target_compile_definitions(Utils PRIVATE # 编译宏定义，仅作用于本目标
     "$<$<PLATFORM_ID:Windows>:NOMINMAX;WIN32_LEAN_AND_MEAN>" # 禁止 min/max 宏、精简 windows.h
     "$<$<CXX_COMPILER_ID:MSVC>:_CRT_SECURE_NO_WARNINGS>" # 关闭 MSVC CRT 安全告警
+    UTILS_VERSION="${PROJECT_VERSION}" # 库版本号，供 init() 打印，避免各处硬编码
 )
 
 set_target_properties(Utils PROPERTIES # 设置目标的各类属性
     VERSION ${PROJECT_VERSION} # 动态库全版本：libMyLib.so.1.0.0 / MyLib.dll 资源版本
     SOVERSION ${PROJECT_VERSION_MAJOR} # 动态库 soname 主版本：libMyLib.so.1
+    DEBUG_POSTFIX "" # Debug 产物保持同名 Utils.lib / Utils.dll：vcpkg 等包管理器按「同名」打包 Debug 与 Release，加 d 后缀会导致包校验失败；两种配置由各自的库目录区分，不会混淆
     POSITION_INDEPENDENT_CODE ON # 静态库也带 -fPIC，方便被其它动态库引用
     CXX_VISIBILITY_PRESET hidden # 非 Windows：默认隐藏符号，只导出标了 MYLIB_API 的
     VISIBILITY_INLINES_HIDDEN ON # 连带隐藏内联函数符号，减小动态符号表
@@ -187,6 +189,13 @@ install(FILES # 安装上面生成的两个配置文件
     ${CMAKE_CURRENT_BINARY_DIR}/UtilsConfig.cmake # 包配置
     ${CMAKE_CURRENT_BINARY_DIR}/UtilsConfigVersion.cmake # 包版本
     DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/Utils # 与导出目标同目录
+)
+
+# 安装文档：把仓库根目录的 README.md / LICENSE 一并安装，随包分发
+install(FILES # 安装文档文件
+    ${CMAKE_CURRENT_SOURCE_DIR}/README.md # 项目说明文档
+    ${CMAKE_CURRENT_SOURCE_DIR}/LICENSE # 开源许可证
+    DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/doc/Utils # 安装到 share/doc/Utils（DATAROOTDIR 由 GNUInstallDirs 提供，即 share）
 )
 
 # 可选：同时导出「构建树」，让别的工程在未安装时也能 find_package(MyLib)

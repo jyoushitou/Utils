@@ -39,7 +39,8 @@ namespace Utils
     /// @brief      当前服务器ID
     /// @details    存储本服务进程的全局唯一ID
     /// @note       在 .cpp 中定义，头文件仅作 extern 声明
-    extern std::atomic<ServiceID> serviceID;
+    /// @warning    动态库场景必须带导出宏，否则 Utils.cpp 自身链接时就会报 LNK2001
+    Utils_API std::atomic<ServiceID> serviceID{ServiceID::Test};
 
     /// @namespace  Time
     /// @brief      时间工具子模块
@@ -331,6 +332,13 @@ namespace Utils
         // 可选：忽略 SIGPIPE 防止写入已关闭 socket 导致进程崩溃
         std::signal(SIGPIPE, SIG_IGN);
 #endif
+
+        // 版本自述：控制台里能直接看出当前链接的是哪一版 Utils
+        // UTILS_VERSION 由 CMakeLists.txt 的 target_compile_definitions 注入
+#ifndef UTILS_VERSION
+#define UTILS_VERSION "unknown"
+#endif
+        Out::outMsg(std::string("Utils version ") + UTILS_VERSION);
     }
 
     /// @namespace  File

@@ -1,8 +1,10 @@
-#include "Utils.h"
+﻿#include "Utils.h"
 #include <iostream>
 #include <atomic>
 
-std::atomic<ServiceID> Utils::serviceID{ServiceID::Test};
+// Utils::serviceID 由库本体（source/Utils.cpp）定义并导出，这里不再重复定义，
+// 否则静态库链接会出现重复符号、动态库链接会出现 C4273 链接不一致。
+// 测试里按需改值即可： Utils::serviceID = ServiceID::Test;
 
 void testTime()
 {
